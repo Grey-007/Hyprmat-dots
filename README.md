@@ -5,7 +5,7 @@
 > This project is an experimental, evolving theme engine for Hyprland powered by **Matugen**. The goal is to create a modern, adaptive, and visually consistent desktop theme that automatically reacts to wallpapers while maintaining readability and aesthetic quality.
 
 ---
-```
+
 ### To-do
 - [x] Hyprland
 - [ ] Hyprlock
