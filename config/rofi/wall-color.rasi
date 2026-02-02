@@ -1,0 +1,185 @@
+* {
+    primary: #ffb3ae;
+    primary-fixed: #ffdad7;
+    primary-fixed-dim: #ffb3ae;
+    on-primary: #571e1c;
+    on-primary-fixed: #3b0809;
+    on-primary-fixed-variant: #733330;
+    primary-container: #733330;
+    on-primary-container: #ffdad7;
+    secondary: #e7bdb9;
+    secondary-fixed: #ffdad7;
+    secondary-fixed-dim: #e7bdb9;
+    on-secondary: #442927;
+    on-secondary-fixed: #2c1514;
+    on-secondary-fixed-variant: #5d3f3d;
+    secondary-container: #5d3f3d;
+    on-secondary-container: #ffdad7;
+    tertiary: #e2c28c;
+    tertiary-fixed: #ffdea7;
+    tertiary-fixed-dim: #e2c28c;
+    on-tertiary: #402d04;
+    on-tertiary-fixed: #271900;
+    on-tertiary-fixed-variant: #594319;
+    tertiary-container: #594319;
+    on-tertiary-container: #ffdea7;
+    error: #ffb4ab;
+    on-error: #690005;
+    error-container: #93000a;
+    on-error-container: #ffdad6;
+    surface: #1a1111;
+    on-surface: #f1dedd;
+    on-surface-variant: #d8c2bf;
+    outline: #a08c8a;
+    outline-variant: #534342;
+    shadow: #000000;
+    scrim: #000000;
+    inverse-surface: #f1dedd;
+    inverse-on-surface: #382e2d;
+    inverse-primary: #904a46;
+    surface-dim: #1a1111;
+    surface-bright: #423736;
+    surface-container-lowest: #140c0b;
+    surface-container-low: #231919;
+    surface-container: #271d1d;
+    surface-container-high: #322827;
+    surface-container-highest: #3d3231;
+}
+
+* {
+    background:            @surface;
+    foreground:            @on-surface;
+
+    selected:              @primary-container;
+    selected-foreground:   @on-primary-container;
+
+    input-background:      @surface-container;
+    input-foreground:      @on-surface;
+
+    border-color:          @outline;
+}
+
+
+
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               " ";
+	drun-display-format:        "{name}";
+}
+
+/*
+└── window 
+    └── mainbox
+        ├── inputbar
+        │   ├── prompt
+        │   └── entry
+        └── listview
+            └── elements
+*/
+
+window {
+    width:                       750px;
+    border:                      0px;
+    border-radius:               12px;
+    border-color:                @selected;
+    background-color:            @background;
+}
+
+
+mainbox {
+    spacing:                     20px;
+    padding:                     20px;
+    border:                      2px;
+    border-radius:               12px 12px 12px 12px;
+    border-color:                @selected;
+    background-color:            @background;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing:                     10px;
+    padding:                     15px;
+    border:                      0px;
+    border-radius:               10px;
+    border-color:                @selected;
+    background-color:            @input-background;
+    text-color:                  @foreground;
+    children:                    [ "prompt", "entry" ];
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+
+listview {
+    columns:                     5;
+    lines:                       3;
+    scrollbar:                   false;
+    layout:                      vertical;
+    border:                      0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+
+element {
+    spacing:                     15px;
+    padding:                     20px 10px;
+    border:                      0px;
+    border-radius:               10px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+}
+element normal.normal {
+    background-color: transparent;
+    text-color:       @on-surface-variant;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+element selected.normal {
+    background-color: @primary-container;
+    text-color:       @on-primary-container;
+}
+
+element-icon {
+    size:             96px;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+error-message {
+    padding:                     15px;
+    border:                      2px solid;
+    border-radius:               10px;
+    border-color:                @selected;
+    background-color:            black / 10%;
+    text-color:                  @foreground;
+}
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+prompt {
+    background-color: transparent;
+    text-color:       @on-surface;
+}

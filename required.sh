@@ -73,21 +73,15 @@ PKGS=(
     xdg-desktop-portal-hyprland
     wayland
     wl-clipboard
-    grim
-    slurp
-    swappy
     pipewire
     wireplumber
     polkit-gnome
-    qt5-wayland
-    qt6-wayland
     mesa
     libinput
 
     # UI apps
     kitty
     rofi-wayland
-    dunst
     swww
 
     # GTK + File manager
