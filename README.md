@@ -10,13 +10,13 @@
 - [x] Hyprland
 - [x] Hyprlock
 - [x] Matugen
-- [x] gtk themeing(only checked nautilus and its themed so its win i guess)
+- [x] gtk themeing
 - [x] swww setup(wallpaper)
 - [x] Waybar(need more work)
 - [x] Powermenu(rofi)
 - [x] appmenu (rofi)
-- [x] wallpaper switcher(rofi)(next task)
-- [x] spicetify
+- [x] wallpaper switcher(rofi)
+- [ ] spicetify
 - [ ] vs-code
 - [ ] firefox+custom new tab
 - [ ] vesktop/equibop
