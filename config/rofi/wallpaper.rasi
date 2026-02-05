@@ -1,0 +1,7 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    font: "monospace 11";
+}
+
+@theme "~/.config/rofi/wall-color.rasi"
