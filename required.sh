@@ -90,6 +90,7 @@ PKGS=(
   power-profiles-daemon
 
   kitty
+  waybar
   swaync
   cava
   nwg-look
