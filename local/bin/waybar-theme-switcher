@@ -1,0 +1,37 @@
+#!/bin/bash
+
+WAYBAR_DIR="$HOME/.config/waybar"
+THEMES_DIR="$WAYBAR_DIR/themes"
+ICON_DIR="$WAYBAR_DIR/theme-icons"
+
+selected=$(
+  find "$THEMES_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort |
+  while IFS= read -r theme; do
+    icon="$ICON_DIR/$theme.png"
+    if [[ -f "$icon" ]]; then
+      printf '%s\0icon\x1f%s\n' "$theme" "$icon"
+    else
+      printf '%s\n' "$theme"
+    fi
+  done |
+  rofi -dmenu -i -show-icons -p "Waybar Theme" -theme ~/.config/rofi/config.rasi
+)
+
+[[ -z "$selected" ]] && exit 0
+
+theme_path="$THEMES_DIR/$selected"
+
+# Validate theme
+if [[ ! -f "$theme_path/style.css" || ! -f "$theme_path/config.jsonc" ]]; then
+  notify-send "Waybar" "Theme '$selected' missing files"
+  exit 1
+fi
+
+# Apply theme
+cp "$theme_path/style.css" "$WAYBAR_DIR/style.css"
+cp "$theme_path/config.jsonc" "$WAYBAR_DIR/config.jsonc"
+
+# Restart Waybar
+~/.local/bin/waybar-restart.sh
+
+notify-send "Waybar Theme" "Switched to $selected"

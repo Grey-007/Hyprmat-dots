@@ -12,15 +12,17 @@
 - [x] Matugen
 - [x] gtk themeing
 - [x] swww setup(wallpaper)
-- [x] Waybar(need more work)
+- [x] Waybar
 - [x] Powermenu(rofi)
 - [x] appmenu (rofi)
 - [x] wallpaper switcher(rofi)
-- [ ] spicetify
+- [x] waybar config switcher (rofi)
+- [ ] spicetify(working --current task)
 - [ ] vs-code
-- [ ] firefox+custom new tab
+- [x] firefox(pywalfox)
+- [ ] custom new tab (firefox|zen|etc.)
 - [ ] vesktop/equibop
-- [x] notification(sway)
+- [ ] notification(sway)
 - [x] hypridle
 
 ## ⚠️ Disclaimer
