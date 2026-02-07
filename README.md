@@ -4,7 +4,8 @@
 ![Repo size](https://img.shields.io/github/repo-size/Grey-007/Hyprmat-dots?style=for-the-badge&label=REPO%20SIZE&labelColor=81C784&color=424242)
 ![Visitors](https://komarev.com/ghpvc/?username=Grey-007&repo=Hyprmat-dots&style=for-the-badge&label=VISITORS&labelColor=81C784&color=424242)
 
-** A complete, wallpaper-driven Hyprland rice powered by Matugen**
+---
+A complete, wallpaper-driven Hyprland rice powered by Matugen 
 
 HyprMat is a **fully realized Hyprland theming ecosystem** built around **Matugen**, designed to deliver a visually consistent, adaptive, and modern Linux desktop experience.
 
