@@ -1,40 +1,110 @@
-# 🌌 HyprMat
+## 🌌 HyprMat
+![GitHub stars](https://img.shields.io/github/stars/Grey-007/Hyprmat-dots?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/Grey-007/Hyprmat-dots?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/Grey-007/Hyprmat-dots?style=flat-square)
+![Visitors](https://komarev.com/ghpvc/?username=Grey-007\&repo=Hyprmat-dots\&style=flat-square)
 
-> 🚧 **Status: Work in Progress (WIP)**
->
-> This project is an experimental, evolving theme engine for Hyprland powered by **Matugen**. The goal is to create a modern, adaptive, and visually consistent desktop theme that automatically reacts to wallpapers while maintaining readability and aesthetic quality.
+** A complete, wallpaper-driven Hyprland rice powered by Matugen**
+
+HyprMat is a **fully realized Hyprland theming ecosystem** built around **Matugen**, designed to deliver a visually consistent, adaptive, and modern Linux desktop experience.
+
+Every component — from the compositor to applications — dynamically follows a single color source (your wallpaper), ensuring **harmony, contrast safety, and readability** across the entire system.
+
+This is not a demo or a proof-of-concept.
+**HyprMat is a finished, daily-usable rice.**
 
 ---
 
-### To-do
-- [x] Hyprland
-- [x] Hyprlock
-- [x] Matugen
-- [x] gtk themeing
-- [x] swww setup(wallpaper)
-- [x] Waybar
-- [x] Powermenu(rofi)
-- [x] appmenu (rofi)
-- [x] wallpaper switcher(rofi)
-- [x] waybar config switcher (rofi)
-- [x] spicetify
-- [x] vs-code
-- [x] firefox(pywalfox)
-- [x] custom new tab (firefox|zen|etc.)
-- [ ] vesktop/equibop
-- [x] notification(sway)
-- [x] hypridle
+## ✨ Core Philosophy
+
+> **One wallpaper → one palette → one cohesive system**
+
+HyprMat focuses on:
+
+* Wallpaper-driven color generation
+* Consistent theming across Wayland, GTK, CLI, and apps
+* Minimal manual tweaking
+* Clean, reproducible configuration
+
+---
+
+## 🖼 Screenshots
+
+> ⚠️ Screenshots may not reflect your setup exactly due to different wallpapers and displays.
+
+| ------------------------------------- | ---------------------------------- | ------------------------------------ |
+| ![](./assets/screenshots/ss1.png)     | ![](./assets/screenshots/ss2.png)  | ![](./assets/screenshots/ss3.png)    |
+|                                       |                                    |                                      |
+| ------------------------------------- | ---------------------------------- | ------------------------------------ |
+| ![](./assets/screenshots/ss4.png)     | ![](./assets/screenshots/ss5.png)  | ![](./assets/screenshots/ss6.png)    |
+|                                       |                                    |                                      |
+| ------------------------------------- | ---------------------------------- | ------------------------------------ |
+| ![](./assets/screenshots/ss7.png)     | ![](./assets/screenshots/ss8.png)  | ![](./assets/screenshots/ss9.png)    |
+
+
+---
+
+## ✅ Features & Components
+
+### 🪟 Compositor & System
+
+* ✔ **Hyprland** (core compositor)
+* ✔ **Hyprlock**
+* ✔ **Hypridle**
+* ✔ **Matugen** (color generation engine)
+* ✔ **swww** (wallpaper handling)
+
+### 🎛 Bars, Menus & UI
+
+* ✔ **Waybar** (themed + switchable configs)
+* ✔ **Rofi** power menu
+* ✔ **Rofi** app launcher
+* ✔ **Rofi** wallpaper switcher
+* ✔ **Rofi** Waybar config switcher
+* ✔ **Sway notification system**
+
+### 🎨 Application Theming
+
+* ✔ GTK theming
+* ✔ **Spicetify** (Spotify)
+* ✔ **VS Code**
+* ✔ **Firefox** (via Pywalfox)
+* ✔ Custom browser new tab (Firefox / Zen / others)
+
+### 🕒 Pending / Optional
+
+* ⏳ Vesktop / Equibop theming
+
+---
+
+## 🧠 What Makes HyprMat Different
+
+* No scattered color configs
+* No manual recoloring per app
+* No inconsistent accents
+
+HyprMat treats your **wallpaper as the source of truth**, propagating its palette cleanly and predictably across the system.
+
+---
 
 ## ⚠️ Disclaimer
 
-This project is experimental and evolving. Expect breaking changes, unfinished features, and refactors.
+HyprMat is a **personal rice**, shared as-is.
 
-If you like the idea, feel free to fork, experiment, and improve it.
+While it is complete and stable for daily use:
+
+* Expect opinionated design choices
+* Configs may change as the ecosystem evolves
+* Not intended to be “plug-and-play” for every setup
+
+Forking and customization are encouraged.
 
 ---
 
 ## 🧑‍💻 Author
 
-Built as a personal Hyprland theming experiment with Matugen.
+Built as a personal Hyprland ricing project using Matugen.
 
-> "Wallpaper should not just change the background — it should change the entire system." 🌌
+> **“Wallpaper should not just change the background — it should change the entire system.”** 🌌
+
+---
