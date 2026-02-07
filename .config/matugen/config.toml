@@ -9,17 +9,14 @@ contrast = "high"
 
 # 🎨 Saturation boosts (safe but noticeable)
 [overrides.primary]
-saturation = 1.9
+saturation = 3
 
 [overrides.secondary]
-saturation = 1.2
+saturation = 2
 
 [overrides.tertiary]
-saturation = 1.15
+saturation = 1.4
 
-# 🖤 AMOLED / deep dark surfaces
-[surface]
-darkest = true
 
 [templates.hyprland]
 input_path = "/home/grey/.config/matugen/templates/hyprland.conf"
@@ -37,9 +34,9 @@ output_path = "/home/grey/.config/kitty/matugen.conf"
 input_path = "/home/grey/.config/matugen/templates/rofi.rasi"
 output_path = "/home/grey/.config/rofi/colors.rasi"
 
-[templates.swaync]
-input_path = "/home/grey/.config/matugen/templates/swaync.css"
-output_path = "/home/grey/.config/swaync/style.css"
+# [templates.swaync]
+# input_path = "/home/grey/.config/matugen/templates/swaync.css"
+# output_path = "/home/grey/.config/swaync/style.css"
 
 [templates.waybar_colors]
 input_path = "/home/grey/.config/matugen/templates/waybar-colors.css"
@@ -55,7 +52,6 @@ output_path = '/home/grey/.config//gtk-3.0/gtk.css'
 input_path = '/home/grey/.config/matugen/templates/gtk-colors.css'
 output_path = '/home/grey/.config/gtk-4.0/gtk.css'
 
-
 [templates.cava]
 input_path = '/home/grey/.config/matugen/templates/cava-colors.ini'
 output_path = '/home/grey/.config/cava/themes/matugen'
@@ -70,8 +66,15 @@ post_hook = 'pkill -USR2 btop || true'
 input_path = "/home/grey/.config/matugen/templates/rofi-wall.rasi"
 output_path = "/home/grey/.config/rofi/wall-color.rasi"
 
-
 [templates.pywalfox]
 input_path = '/home/grey/.config/matugen/templates/pywalfox-colors.json'
 output_path = '/home/grey/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
+
+[templates.vscode]
+input_path = '~/.config/matugen/templates/vscode.json'
+output_path = '~/.config/Code/User/settings.json'
+
+[templates.spicetify]
+input_path = "~/.config/matugen/templates/spicetify.ini"
+output_path = "~/.config/spicetify/Themes/Matugen/color.ini"

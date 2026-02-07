@@ -1,0 +1,14 @@
+/* =========================
+   Matugen → Waybar Colors
+   ========================= */
+
+@define-color background #131318;
+@define-color second-background #131318;
+@define-color text #e4e1e9;
+@define-color borders #918f9a;
+@define-color focused #c0c1ff;
+@define-color focused2 #c5c4dd;
+@define-color color1 #3f4178;
+@define-color color2 #e8b9d4;
+@define-color color3 #454559;
+@define-color urgent #ffb4ab;

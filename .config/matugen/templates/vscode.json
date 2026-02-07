@@ -1,0 +1,398 @@
+{
+  "material-code.colors": {
+    // Primary colors - main brand color
+    "primary": "{{colors.primary.default.hex}}",
+    "primaryForeground": "{{colors.on_primary.default.hex}}",
+    
+    // Foreground colors - text and icons
+    "foreground": "{{colors.on_surface.default.hex}}",
+    "mutedForeground": "{{colors.on_surface_variant.default.hex}}",
+    
+    // Background surfaces
+    "background": "{{colors.surface.default.hex}}",
+    "card": "{{colors.surface_container.default.hex}}",
+    "popover": "{{colors.surface_container_high.default.hex}}",
+    "hover": "{{colors.surface_container_highest.default.hex}}",
+    
+    // Borders and dividers
+    "border": "{{colors.outline_variant.default.hex}}",
+    
+    // Secondary colors - accents and supporting UI
+    "secondary": "{{colors.secondary_container.default.hex}}",
+    "secondaryForeground": "{{colors.on_secondary_container.default.hex}}",
+    
+    // Tertiary colors - additional accents
+    "tertiary": "{{colors.tertiary_container.default.hex}}",
+    "tertiaryForeground": "{{colors.on_tertiary_container.default.hex}}",
+    
+    // Error states
+    "error": "{{colors.error.default.hex}}",
+    "errorForeground": "{{colors.on_error.default.hex}}",
+    "errorContainer": "{{colors.error_container.default.hex}}",
+    "errorContainerForeground": "{{colors.on_error_container.default.hex}}",
+    
+    // Success states (using tertiary as fallback for green)
+    "success": "{{colors.tertiary.default.hex}}",
+    "successForeground": "{{colors.on_tertiary.default.hex}}",
+    "successContainer": "{{colors.tertiary_container.default.hex}}",
+    "successContainerForeground": "{{colors.on_tertiary_container.default.hex}}",
+    
+    // Warning states (using secondary as fallback for yellow/orange)
+    "warning": "{{colors.secondary.default.hex}}",
+    "warningForeground": "{{colors.on_secondary.default.hex}}",
+    "warningContainer": "{{colors.secondary_container.default.hex}}",
+    "warningContainerForeground": "{{colors.on_secondary_container.default.hex}}",
+    
+    // Info states (using primary)
+    "info": "{{colors.primary.default.hex}}",
+    "infoForeground": "{{colors.on_primary.default.hex}}",
+    "infoContainer": "{{colors.primary_container.default.hex}}",
+    "infoContainerForeground": "{{colors.on_primary_container.default.hex}}",
+    
+    // Syntax highlighting - Comments and documentation
+    "syntax.comment": "{{colors.on_surface_variant.default.hex}}",
+    "syntax.commentDoc": "{{colors.on_surface_variant.default.hex}}",
+    
+    // Syntax highlighting - Strings and characters
+    "syntax.string": "{{colors.tertiary.default.hex}}",
+    "syntax.character": "{{colors.tertiary.default.hex}}",
+    "syntax.stringEscape": "{{colors.tertiary_container.default.hex}}",
+    
+    // Syntax highlighting - Keywords and control flow
+    "syntax.keyword": "{{colors.primary.default.hex}}",
+    "syntax.controlFlow": "{{colors.primary.default.hex}}",
+    "syntax.operator": "{{colors.on_surface.default.hex}}",
+    "syntax.storage": "{{colors.primary.default.hex}}",
+    "syntax.modifier": "{{colors.primary.default.hex}}",
+    
+    // Syntax highlighting - Variables and identifiers
+    "syntax.variable": "{{colors.on_surface.default.hex}}",
+    "syntax.variableReadonly": "{{colors.secondary.default.hex}}",
+    "syntax.parameter": "{{colors.on_surface_variant.default.hex}}",
+    "syntax.tag": "{{colors.error.default.hex}}",
+    
+    // Syntax highlighting - Attributes and selectors
+    "syntax.attribute": "{{colors.secondary.default.hex}}",
+    "syntax.selector": "{{colors.secondary.default.hex}}",
+    
+    // Syntax highlighting - Properties
+    "syntax.property": "{{colors.on_surface.default.hex}}",
+    "syntax.propertyDeclaration": "{{colors.on_surface.default.hex}}",
+    
+    // Syntax highlighting - Functions and methods
+    "syntax.function": "{{colors.primary.default.hex}}",
+    "syntax.method": "{{colors.primary.default.hex}}",
+    "syntax.functionCall": "{{colors.primary.default.hex}}",
+    
+    // Syntax highlighting - Types and classes
+    "syntax.type": "{{colors.secondary.default.hex}}",
+    "syntax.class": "{{colors.secondary.default.hex}}",
+    "syntax.interface": "{{colors.secondary.default.hex}}",
+    "syntax.struct": "{{colors.secondary.default.hex}}",
+    "syntax.enum": "{{colors.secondary.default.hex}}",
+    
+    // Syntax highlighting - Constants and numbers
+    "syntax.constant": "{{colors.tertiary.default.hex}}",
+    "syntax.number": "{{colors.tertiary.default.hex}}",
+    "syntax.boolean": "{{colors.tertiary.default.hex}}",
+    "syntax.null": "{{colors.on_surface_variant.default.hex}}",
+    
+    // Syntax highlighting - Macros and decorators
+    "syntax.macro": "{{colors.error.default.hex}}",
+    "syntax.decorator": "{{colors.secondary.default.hex}}",
+    "syntax.annotation": "{{colors.secondary.default.hex}}",
+    
+    // Syntax highlighting - Markup
+    "syntax.heading": "{{colors.primary.default.hex}}",
+    "syntax.bold": "{{colors.on_surface.default.hex}}",
+    "syntax.italic": "{{colors.on_surface_variant.default.hex}}",
+    "syntax.link": "{{colors.primary.default.hex}}",
+    "syntax.code": "{{colors.tertiary.default.hex}}",
+    
+    // Syntax highlighting - Regular expressions
+    "syntax.regexp": "{{colors.error.default.hex}}",
+    
+    // Syntax highlighting - Punctuation
+    "syntax.punctuation": "{{colors.on_surface_variant.default.hex}}",
+    "syntax.punctuationDelimiter": "{{colors.on_surface_variant.default.hex}}",
+    
+    // Bracket pair colorization
+    "syntax.bracket1": "{{colors.primary.default.hex}}",
+    "syntax.bracket2": "{{colors.secondary.default.hex}}",
+    "syntax.bracket3": "{{colors.tertiary.default.hex}}",
+    "syntax.bracket4": "{{colors.error.default.hex}}",
+    "syntax.bracket5": "{{colors.primary_container.default.hex}}",
+    "syntax.bracket6": "{{colors.secondary_container.default.hex}}",
+    
+    // Git and diff colors
+    "git.added": "{{colors.tertiary.default.hex}}",
+    "git.addedForeground": "{{colors.on_tertiary.default.hex}}",
+    "git.modified": "{{colors.primary.default.hex}}",
+    "git.modifiedForeground": "{{colors.on_primary.default.hex}}",
+    "git.deleted": "{{colors.error.default.hex}}",
+    "git.deletedForeground": "{{colors.on_error.default.hex}}",
+    "git.untracked": "{{colors.secondary.default.hex}}",
+    "git.untrackedForeground": "{{colors.on_secondary.default.hex}}",
+    "git.ignored": "{{colors.on_surface_variant.default.hex}}",
+    "git.conflict": "{{colors.error.default.hex}}",
+    
+    // Diff editor colors
+    "diff.inserted": "{{colors.tertiary_container.default.hex}}",
+    "diff.insertedForeground": "{{colors.on_tertiary_container.default.hex}}",
+    "diff.removed": "{{colors.error_container.default.hex}}",
+    "diff.removedForeground": "{{colors.on_error_container.default.hex}}",
+    "diff.modified": "{{colors.primary_container.default.hex}}",
+    "diff.modifiedForeground": "{{colors.on_primary_container.default.hex}}",
+    
+    // Editor colors
+    "editor.selection": "{{colors.primary_container.default.hex}}",
+    "editor.selectionForeground": "{{colors.on_primary_container.default.hex}}",
+    "editor.inactiveSelection": "{{colors.surface_container_high.default.hex}}",
+    "editor.lineHighlight": "{{colors.surface_container.default.hex}}",
+    "editor.findMatch": "{{colors.tertiary_container.default.hex}}",
+    "editor.findMatchForeground": "{{colors.on_tertiary_container.default.hex}}",
+    "editor.currentFindMatch": "{{colors.tertiary.default.hex}}",
+    "editor.wordHighlight": "{{colors.secondary_container.default.hex}}",
+    "editor.wordHighlightStrong": "{{colors.secondary.default.hex}}",
+    
+    // Editor gutter
+    "editorGutter.background": "{{colors.surface.default.hex}}",
+    "editorGutter.addedBackground": "{{colors.tertiary.default.hex}}",
+    "editorGutter.modifiedBackground": "{{colors.primary.default.hex}}",
+    "editorGutter.deletedBackground": "{{colors.error.default.hex}}",
+    
+    // Editor widget colors
+    "editorWidget.background": "{{colors.surface_container_high.default.hex}}",
+    "editorWidget.foreground": "{{colors.on_surface.default.hex}}",
+    "editorWidget.border": "{{colors.outline.default.hex}}",
+    
+    // Sidebar colors
+    "sidebar.background": "{{colors.surface.default.hex}}",
+    "sidebar.foreground": "{{colors.on_surface.default.hex}}",
+    "sidebar.border": "{{colors.outline_variant.default.hex}}",
+    "sidebarSection.background": "{{colors.surface_container.default.hex}}",
+    "sidebarSection.foreground": "{{colors.on_surface.default.hex}}",
+    "sidebarSection.border": "{{colors.outline_variant.default.hex}}",
+    
+    // Activity bar
+    "activityBar.background": "{{colors.surface_container.default.hex}}",
+    "activityBar.foreground": "{{colors.on_surface.default.hex}}",
+    "activityBar.inactiveForeground": "{{colors.on_surface_variant.default.hex}}",
+    "activityBar.border": "{{colors.outline_variant.default.hex}}",
+    "activityBarBadge.background": "{{colors.primary.default.hex}}",
+    "activityBarBadge.foreground": "{{colors.on_primary.default.hex}}",
+    
+    // Status bar
+    "statusBar.background": "{{colors.surface_container.default.hex}}",
+    "statusBar.foreground": "{{colors.on_surface.default.hex}}",
+    "statusBar.border": "{{colors.outline_variant.default.hex}}",
+    "statusBar.debuggingBackground": "{{colors.error.default.hex}}",
+    "statusBar.debuggingForeground": "{{colors.on_error.default.hex}}",
+    "statusBar.noFolderBackground": "{{colors.surface_container.default.hex}}",
+    
+    // Title bar
+    "titleBar.activeBackground": "{{colors.surface_container.default.hex}}",
+    "titleBar.activeForeground": "{{colors.on_surface.default.hex}}",
+    "titleBar.inactiveBackground": "{{colors.surface.default.hex}}",
+    "titleBar.inactiveForeground": "{{colors.on_surface_variant.default.hex}}",
+    "titleBar.border": "{{colors.outline_variant.default.hex}}",
+    
+    // Menu bar
+    "menubar.background": "{{colors.surface_container.default.hex}}",
+    "menubar.foreground": "{{colors.on_surface.default.hex}}",
+    "menu.background": "{{colors.surface_container_high.default.hex}}",
+    "menu.foreground": "{{colors.on_surface.default.hex}}",
+    "menu.selectionBackground": "{{colors.surface_container_highest.default.hex}}",
+    "menu.selectionForeground": "{{colors.on_surface.default.hex}}",
+    "menu.border": "{{colors.outline.default.hex}}",
+    
+    // Tabs
+    "tab.activeBackground": "{{colors.surface.default.hex}}",
+    "tab.activeForeground": "{{colors.on_surface.default.hex}}",
+    "tab.inactiveBackground": "{{colors.surface_container.default.hex}}",
+    "tab.inactiveForeground": "{{colors.on_surface_variant.default.hex}}",
+    "tab.border": "{{colors.outline_variant.default.hex}}",
+    "tab.activeBorder": "{{colors.primary.default.hex}}",
+    "tab.hoverBackground": "{{colors.surface_container_high.default.hex}}",
+    "tab.hoverForeground": "{{colors.on_surface.default.hex}}",
+    
+    // Panel (terminal, output, debug console)
+    "panel.background": "{{colors.surface.default.hex}}",
+    "panel.foreground": "{{colors.on_surface.default.hex}}",
+    "panel.border": "{{colors.outline_variant.default.hex}}",
+    "panelTitle.activeForeground": "{{colors.on_surface.default.hex}}",
+    "panelTitle.inactiveForeground": "{{colors.on_surface_variant.default.hex}}",
+    "panelTitle.activeBorder": "{{colors.primary.default.hex}}",
+    
+    // Terminal colors
+    "terminal.background": "{{colors.surface.default.hex}}",
+    "terminal.foreground": "{{colors.on_surface.default.hex}}",
+    "terminal.ansiBlack": "{{colors.surface_dim.default.hex}}",
+    "terminal.ansiRed": "{{colors.error.default.hex}}",
+    "terminal.ansiGreen": "{{colors.tertiary.default.hex}}",
+    "terminal.ansiYellow": "{{colors.secondary.default.hex}}",
+    "terminal.ansiBlue": "{{colors.primary.default.hex}}",
+    "terminal.ansiMagenta": "{{colors.error_container.default.hex}}",
+    "terminal.ansiCyan": "{{colors.tertiary_container.default.hex}}",
+    "terminal.ansiWhite": "{{colors.on_surface.default.hex}}",
+    "terminal.ansiBrightBlack": "{{colors.on_surface_variant.default.hex}}",
+    "terminal.ansiBrightRed": "{{colors.error.default.hex}}",
+    "terminal.ansiBrightGreen": "{{colors.tertiary.default.hex}}",
+    "terminal.ansiBrightYellow": "{{colors.secondary.default.hex}}",
+    "terminal.ansiBrightBlue": "{{colors.primary.default.hex}}",
+    "terminal.ansiBrightMagenta": "{{colors.error_container.default.hex}}",
+    "terminal.ansiBrightCyan": "{{colors.tertiary_container.default.hex}}",
+    "terminal.ansiBrightWhite": "{{colors.surface_bright.default.hex}}",
+    
+    // Buttons
+    "button.background": "{{colors.primary.default.hex}}",
+    "button.foreground": "{{colors.on_primary.default.hex}}",
+    "button.hoverBackground": "{{colors.primary_container.default.hex}}",
+    "button.secondaryBackground": "{{colors.secondary_container.default.hex}}",
+    "button.secondaryForeground": "{{colors.on_secondary_container.default.hex}}",
+    
+    // Input fields
+    "input.background": "{{colors.surface_container_highest.default.hex}}",
+    "input.foreground": "{{colors.on_surface.default.hex}}",
+    "input.border": "{{colors.outline.default.hex}}",
+    "input.placeholderForeground": "{{colors.on_surface_variant.default.hex}}",
+    "inputOption.activeBackground": "{{colors.primary_container.default.hex}}",
+    "inputOption.activeForeground": "{{colors.on_primary_container.default.hex}}",
+    "inputValidation.errorBackground": "{{colors.error_container.default.hex}}",
+    "inputValidation.errorForeground": "{{colors.on_error_container.default.hex}}",
+    "inputValidation.errorBorder": "{{colors.error.default.hex}}",
+    "inputValidation.warningBackground": "{{colors.secondary_container.default.hex}}",
+    "inputValidation.warningForeground": "{{colors.on_secondary_container.default.hex}}",
+    "inputValidation.warningBorder": "{{colors.secondary.default.hex}}",
+    
+    // Dropdowns
+    "dropdown.background": "{{colors.surface_container_high.default.hex}}",
+    "dropdown.foreground": "{{colors.on_surface.default.hex}}",
+    "dropdown.border": "{{colors.outline.default.hex}}",
+    
+    // Lists and trees
+    "list.activeSelectionBackground": "{{colors.primary_container.default.hex}}",
+    "list.activeSelectionForeground": "{{colors.on_primary_container.default.hex}}",
+    "list.inactiveSelectionBackground": "{{colors.surface_container_high.default.hex}}",
+    "list.inactiveSelectionForeground": "{{colors.on_surface.default.hex}}",
+    "list.hoverBackground": "{{colors.surface_container_highest.default.hex}}",
+    "list.hoverForeground": "{{colors.on_surface.default.hex}}",
+    "list.focusBackground": "{{colors.primary_container.default.hex}}",
+    "list.focusForeground": "{{colors.on_primary_container.default.hex}}",
+    "list.errorForeground": "{{colors.error.default.hex}}",
+    "list.warningForeground": "{{colors.secondary.default.hex}}",
+    
+    // Badges
+    "badge.background": "{{colors.primary.default.hex}}",
+    "badge.foreground": "{{colors.on_primary.default.hex}}",
+    
+    // Progress bar
+    "progressBar.background": "{{colors.primary.default.hex}}",
+    
+    // Scrollbar
+    "scrollbar.shadow": "{{colors.shadow.default.hex}}",
+    "scrollbarSlider.background": "{{colors.on_surface_variant.default.hex}}",
+    "scrollbarSlider.hoverBackground": "{{colors.on_surface.default.hex}}",
+    "scrollbarSlider.activeBackground": "{{colors.primary.default.hex}}",
+    
+    // Notifications
+    "notificationCenter.border": "{{colors.outline.default.hex}}",
+    "notificationCenterHeader.background": "{{colors.surface_container_high.default.hex}}",
+    "notificationCenterHeader.foreground": "{{colors.on_surface.default.hex}}",
+    "notifications.background": "{{colors.surface_container_high.default.hex}}",
+    "notifications.foreground": "{{colors.on_surface.default.hex}}",
+    "notifications.border": "{{colors.outline.default.hex}}",
+    "notificationLink.foreground": "{{colors.primary.default.hex}}",
+    
+    // Peek view
+    "peekView.border": "{{colors.primary.default.hex}}",
+    "peekViewEditor.background": "{{colors.surface_container.default.hex}}",
+    "peekViewResult.background": "{{colors.surface_container_high.default.hex}}",
+    "peekViewTitle.background": "{{colors.surface_container_highest.default.hex}}",
+    
+    // Breadcrumbs
+    "breadcrumb.foreground": "{{colors.on_surface_variant.default.hex}}",
+    "breadcrumb.background": "{{colors.surface.default.hex}}",
+    "breadcrumb.focusForeground": "{{colors.on_surface.default.hex}}",
+    "breadcrumb.activeSelectionForeground": "{{colors.primary.default.hex}}",
+    "breadcrumbPicker.background": "{{colors.surface_container_high.default.hex}}",
+    
+    // Minimap
+    "minimap.background": "{{colors.surface.default.hex}}",
+    "minimap.findMatchHighlight": "{{colors.tertiary_container.default.hex}}",
+    "minimap.selectionHighlight": "{{colors.primary_container.default.hex}}",
+    "minimap.errorHighlight": "{{colors.error.default.hex}}",
+    "minimap.warningHighlight": "{{colors.secondary.default.hex}}",
+    
+    // Overview ruler
+    "editorOverviewRuler.border": "{{colors.outline_variant.default.hex}}",
+    "editorOverviewRuler.errorForeground": "{{colors.error.default.hex}}",
+    "editorOverviewRuler.warningForeground": "{{colors.secondary.default.hex}}",
+    "editorOverviewRuler.infoForeground": "{{colors.primary.default.hex}}",
+    
+    // Extensions
+    "extensionButton.prominentBackground": "{{colors.primary.default.hex}}",
+    "extensionButton.prominentForeground": "{{colors.on_primary.default.hex}}",
+    "extensionButton.prominentHoverBackground": "{{colors.primary_container.default.hex}}",
+    
+    // Quick picker
+    "pickerGroup.foreground": "{{colors.primary.default.hex}}",
+    "pickerGroup.border": "{{colors.outline_variant.default.hex}}",
+    "quickInput.background": "{{colors.surface_container_high.default.hex}}",
+    "quickInput.foreground": "{{colors.on_surface.default.hex}}",
+    
+    // Settings editor
+    "settings.headerForeground": "{{colors.on_surface.default.hex}}",
+    "settings.modifiedItemIndicator": "{{colors.primary.default.hex}}",
+    "settings.dropdownBackground": "{{colors.surface_container_high.default.hex}}",
+    "settings.dropdownForeground": "{{colors.on_surface.default.hex}}",
+    "settings.dropdownBorder": "{{colors.outline.default.hex}}",
+    "settings.checkboxBackground": "{{colors.surface_container_high.default.hex}}",
+    "settings.checkboxForeground": "{{colors.on_surface.default.hex}}",
+    "settings.checkboxBorder": "{{colors.outline.default.hex}}",
+    "settings.textInputBackground": "{{colors.surface_container_highest.default.hex}}",
+    "settings.textInputForeground": "{{colors.on_surface.default.hex}}",
+    "settings.textInputBorder": "{{colors.outline.default.hex}}",
+    "settings.numberInputBackground": "{{colors.surface_container_highest.default.hex}}",
+    "settings.numberInputForeground": "{{colors.on_surface.default.hex}}",
+    "settings.numberInputBorder": "{{colors.outline.default.hex}}",
+    
+    // Debug colors
+    "debugToolBar.background": "{{colors.surface_container_high.default.hex}}",
+    "debugToolBar.border": "{{colors.outline.default.hex}}",
+    "debugExceptionWidget.background": "{{colors.error_container.default.hex}}",
+    "debugExceptionWidget.border": "{{colors.error.default.hex}}",
+    
+    // Welcome page
+    "welcomePage.background": "{{colors.surface.default.hex}}",
+    "welcomePage.buttonBackground": "{{colors.surface_container.default.hex}}",
+    "welcomePage.buttonHoverBackground": "{{colors.surface_container_high.default.hex}}",
+    "walkThrough.embeddedEditorBackground": "{{colors.surface_container.default.hex}}",
+    
+    // Git decoration colors
+    "gitDecoration.addedResourceForeground": "{{colors.tertiary.default.hex}}",
+    "gitDecoration.modifiedResourceForeground": "{{colors.primary.default.hex}}",
+    "gitDecoration.deletedResourceForeground": "{{colors.error.default.hex}}",
+    "gitDecoration.untrackedResourceForeground": "{{colors.secondary.default.hex}}",
+    "gitDecoration.ignoredResourceForeground": "{{colors.on_surface_variant.default.hex}}",
+    "gitDecoration.conflictingResourceForeground": "{{colors.error.default.hex}}",
+    "gitDecoration.submoduleResourceForeground": "{{colors.on_surface_variant.default.hex}}",
+    
+    // Merge conflicts
+    "merge.currentHeaderBackground": "{{colors.tertiary_container.default.hex}}",
+    "merge.incomingHeaderBackground": "{{colors.primary_container.default.hex}}",
+    "merge.currentContentBackground": "{{colors.tertiary_container.default.hex}}",
+    "merge.incomingContentBackground": "{{colors.primary_container.default.hex}}",
+    "merge.border": "{{colors.outline.default.hex}}",
+    
+    // Charts (if applicable)
+    "charts.foreground": "{{colors.on_surface.default.hex}}",
+    "charts.lines": "{{colors.outline_variant.default.hex}}",
+    "charts.red": "{{colors.error.default.hex}}",
+    "charts.blue": "{{colors.primary.default.hex}}",
+    "charts.yellow": "{{colors.secondary.default.hex}}",
+    "charts.green": "{{colors.tertiary.default.hex}}",
+    "charts.purple": "{{colors.error_container.default.hex}}",
+    "charts.orange": "{{colors.secondary_container.default.hex}}"
+  }
+}

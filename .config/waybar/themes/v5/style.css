@@ -1,0 +1,164 @@
+@import url("colors.css");
+
+* {
+    font-family: "Iosevka Nerd Font";
+    font-weight: bold;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+window > box {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#window {
+    background-color: @background;
+    border-radius: 4px;
+    padding: 8px 12px 8px 8px;
+    margin: 4px 0;
+}
+
+window#waybar.empty #window {
+    background: rgba(12, 12, 12, 0);
+}
+
+.modules-left {
+    padding: 3px;
+}
+
+.modules-right {
+    padding: 3px;
+}
+
+.modules-center {
+    padding: 3px;
+}
+
+#workspaces {
+    background-color: @background;
+    border-radius: 4px;
+    padding: 4px 4px 4px 6px;
+    margin: 4px 0;
+}
+
+#workspaces button {
+    min-height: 0;
+    padding: 0 7px;
+    margin-right: 2px;
+    color: @text;
+}
+
+#workspaces button.urgent {
+    color: @urgent;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#workspaces button.empty {
+    color: @borders;
+}
+
+#workspaces button.visible {
+    color: @focused2;
+}
+
+#workspaces button.active {
+    color: @focused;
+}
+
+@keyframes blink {
+    to {
+        color: @background;
+        background-color: @urgent;
+    }
+}
+
+#custom-launcher {
+    background-color: @background;
+    border-radius: 4px;
+    padding: 8px 8px 8px 4px;
+    margin: 4px 0;
+    color: @focused;
+}
+
+
+
+#cpu {
+    background-color: @background;
+    border-radius: 4px 4px 4px 4px;
+    padding: 8px 8px 8px 20px;
+    margin: 4px 0;
+    color: @color2;
+}
+
+#wireplumber {
+    background-color: @background;
+    border-radius: 4px;
+    padding: 8px 8px 8px 20px;
+    margin: 4px 0;
+    color: @color2;
+}
+
+#wireplumber.muted {
+    color: @urgent;
+}
+
+#clock {
+    background-color: @background;
+    border-radius: 4px 4px 4px 4px;
+    padding: 8px 10px 10px 10px;
+    margin: 4px 0;
+    color: @focused2;
+}
+
+#custom-cava {
+    background-color: @background;
+    color: @focused;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 4px 0;
+}
+#network {
+    background-color: @background;
+    color: @text;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 4px 0;
+}
+
+#network.disabled {
+    color: @urgent;
+}
+
+#tray {
+    background-color: @background;
+    border-radius: 20px;
+    padding: 8px 12px 8px 12px;
+    margin: 4px 0;
+}
+
+#battery {
+    background-color: @background;
+    color: @text;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 4px 0;
+}
+
+#backlight {
+    background-color: @background;
+    color: @text;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 4px 0;
+}

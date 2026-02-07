@@ -17,12 +17,12 @@
 - [x] appmenu (rofi)
 - [x] wallpaper switcher(rofi)
 - [x] waybar config switcher (rofi)
-- [ ] spicetify(working --current task)
-- [ ] vs-code
+- [x] spicetify
+- [x] vs-code
 - [x] firefox(pywalfox)
-- [ ] custom new tab (firefox|zen|etc.)
+- [x] custom new tab (firefox|zen|etc.)
 - [ ] vesktop/equibop
-- [ ] notification(sway)
+- [x] notification(sway)
 - [x] hypridle
 
 ## ⚠️ Disclaimer

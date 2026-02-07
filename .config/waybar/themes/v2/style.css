@@ -1,0 +1,347 @@
+@import url("colors.css");
+
+* {
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 600;
+    color: @text;
+    border: none;
+}
+
+window#waybar {
+    padding-bottom: 0px;
+    background: none;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite,
+window#waybar.chromium {
+    background-color: @background;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    background: transparent;
+    padding: 0 5px;
+}
+
+button:hover {
+    background: rgba(154, 203, 250, 0.2);
+    box-shadow: inset 0 -3px @focused;
+}
+
+#workspaces button {
+    border-radius: 0 0 0 0;
+    padding: 0 5px;
+    background-color: transparent;
+}
+
+#workspaces button:hover {
+    background: rgba(154, 203, 250, 0.2);
+}
+
+#workspaces button.active {
+    background-color: @color1;
+    box-shadow: inset 0 -3px @focused;
+}
+
+#workspaces button.urgent {
+    background-color: @urgent;
+    box-shadow: inset 0 -3px @urgent;
+}
+
+#mode {
+    background-color: @color1;
+    box-shadow: inset 0 -3px @focused;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    margin: 0 2px;
+    background-color: @background;
+}
+
+#window,
+#workspaces {
+    background-color: @background;
+    margin: 0 4px;
+}
+
+#window {
+    padding: 0 8px;
+}
+
+#workspaces {
+    padding: 0;
+}
+
+.modules-left,
+.modules-right,
+.modules-center {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-bottom: 2px;
+}
+
+#clock {
+    background-color: @background;
+}
+
+#battery {
+    background-color: @background;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-color: @color1;
+}
+
+@keyframes blink {
+    to {
+        background-color: @urgent;
+        color: @background;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @urgent;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+    background-color: @color1;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: @color3;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: @second-background;
+}
+
+label:focus {
+    background-color: @focused2;
+}
+
+#cpu {
+    background-color: @color1;
+}
+
+#memory {
+    background-color: @color3;
+}
+
+#disk {
+    background-color: @second-background;
+}
+
+#backlight {
+    background-color: @color3;
+}
+
+#network {
+    background-color: @background;
+}
+
+#network.disconnected {
+    background-color: @borders;
+}
+
+#pulseaudio {
+    background-color: @background;
+}
+
+#pulseaudio.muted {
+    background-color: @color3;
+}
+
+#wireplumber {
+    background-color: @color3;
+}
+
+#wireplumber.muted {
+    background-color: @borders;
+}
+
+#custom-media {
+    background-color: @color2;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: @color2;
+}
+
+#custom-media.custom-vlc {
+    background-color: @color3;
+}
+
+#temperature {
+    background-color: @second-background;
+}
+
+#temperature.critical {
+    background-color: @urgent;
+}
+
+#tray {
+    background-color: @background;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @urgent;
+}
+
+#idle_inhibitor {
+    background-color: @second-background;
+}
+
+#idle_inhibitor.activated {
+    background-color: @color1;
+    color: @text;
+}
+
+#mpd {
+    background-color: @color3;
+}
+
+#mpd.disconnected {
+    background-color: @second-background;
+}
+
+#mpd.stopped {
+    background-color: @borders;
+}
+
+#mpd.paused {
+    background-color: @color3;
+}
+
+#language {
+    background-color: @background;
+    color: @text;
+    padding: 0 8px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background-color: @background;
+    color: @text;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: @color1;
+}
+
+#scratchpad {
+    background: @color3;
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: @text;
+}
+
+#privacy-item.screenshare {
+    background-color: @color1;
+}
+
+#privacy-item.audio-in {
+    background-color: @color3;
+}
+
+#privacy-item.audio-out {
+    background-color: @second-background;
+}
+
+/* Subtle transition effect when hovering over modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    transition: background-color 0.3s ease;
+}
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#mpd:hover {
+    background-color: @color1;
+    box-shadow: inset 0 -2px @focused;
+}

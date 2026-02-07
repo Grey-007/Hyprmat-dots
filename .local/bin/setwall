@@ -7,9 +7,9 @@ WALL="$1"
 
 # wallpaper
 swww img "$WALL" \
-  --transition-type grow \
-  --transition-duration 0.6 \
-  --transition-fps 60
+  --transition-type random \
+  --transition-duration 5 \
+  --transition-fps 120 \
 
 # colors
 matugen image "$WALL"
@@ -25,3 +25,9 @@ swaync-client -R
 
 # spotify
 spicetify apply
+
+# Restart Nautilus
+nautilus -q
+sleep 0.5
+nautilus &
+

@@ -1,0 +1,279 @@
+@import url("colors.css");
+
+/* Modern Aesthetic Waybar Theme */
+* {
+    font-family: "JetBrains Mono", "SF Pro Display", "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: linear-gradient(135deg, @background, @second-background);
+	/* background:transparent; */
+    border-radius: 12px;
+    border: 1px solid @borders;
+    margin: 4px;
+    padding: 2px 4px;
+    transition: all 0.3s ease;
+}
+
+window#waybar:hover {
+    background: linear-gradient(135deg, @background, @second-background);
+    border-color: @borders;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Left modules */
+#workspaces {
+    background: @color3;
+    border-radius: 8px;
+    margin: 2px 4px;
+    padding: 0 2px;
+    border: 1px solid @borders;
+}
+
+#workspaces button {
+    padding: 4px 8px;
+    margin: 1px;
+    color: @borders;
+    background: transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+#workspaces button:hover {
+    background: @focused2;
+    color: @focused;
+    border-color: @focused;
+}
+
+#workspaces button.active {
+    background: linear-gradient(135deg, @focused, @focused2);
+    color: @background;
+    border-color: @focused;
+}
+
+#workspaces button.urgent {
+    background: linear-gradient(135deg, @urgent, @urgent);
+    color: @background;
+    animation: urgent 1s ease-in-out infinite alternate;
+}
+
+@keyframes urgent {
+    from { background: @urgent; opacity: 0.5; }
+    to { background: @urgent; opacity: 1; }
+}
+
+#window {
+    background: linear-gradient(135deg, @color3, @background);
+    border-radius: 8px;
+    margin: 2px 4px;
+    padding: 4px 10px;
+    color: @text;
+    border: 1px solid @borders;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#window:hover {
+    background: linear-gradient(135deg, @color3, @background);
+    border-color: @borders;
+}
+
+#window.empty {
+    background: transparent;
+    border: none;
+}
+
+/* Center module */
+#clock {
+    background: linear-gradient(135deg, @color1, @color3);
+    border-radius: 8px;
+    margin: 2px 4px;
+    padding: 4px 12px;
+    color: @text;
+    border: 1px solid @focused;
+    font-weight: 700;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+#clock:hover {
+    background: linear-gradient(135deg, @color1, @color3);
+    border-color: @focused;
+}
+
+/* Right modules */
+#tray,
+#cpu,
+#memory,
+#backlight,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#bluetooth,
+#battery,
+#custom-power {
+    background: @color3;
+    border-radius: 8px;
+    margin: 2px 1px;
+    padding: 4px 8px;
+    color: @text;
+    border: 1px solid @borders;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#tray {
+    padding: 4px 6px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @urgent;
+}
+
+/* Module hover effects */
+#idle_inhibitor:hover,
+#cpu:hover,
+#memory:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#battery:hover {
+    background: linear-gradient(135deg, @color1, @color3);
+    border-color: @focused;
+}
+
+/* Specific module colors */
+#cpu {
+    color: @color2;
+}
+
+#cpu.warning {
+    color: @color2;
+    background: @color1;
+}
+
+#cpu.critical {
+    color: @urgent;
+    background: @urgent;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+#memory {
+    color: @focused;
+}
+
+#memory.warning {
+    color: @color2;
+    background: @color1;
+}
+
+#memory.critical {
+    color: @urgent;
+    background: @urgent;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+#pulseaudio {
+    color: @color2;
+}
+
+#pulseaudio.muted {
+    color: @urgent;
+    background: @urgent;
+}
+
+#network {
+    color: @focused2;
+}
+
+#network.disconnected {
+    color: @urgent;
+    background: @urgent;
+}
+
+#bluetooth {
+    color: @focused;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @borders;
+}
+
+#battery {
+    color: @color2;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @color2;
+    background: @color1;
+}
+
+#battery.critical:not(.charging) {
+    background: @urgent;
+    color: @urgent;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+#battery.warning:not(.charging) {
+    color: @color2;
+    background: @color1;
+}
+
+@keyframes blink {
+    to {
+        background-color: @urgent;
+        color: @text;
+    }
+}
+
+#idle_inhibitor {
+    color: @focused;
+}
+
+#idle_inhibitor.activated {
+    background: @focused;
+    color: @focused;
+}
+
+#custom-power {
+    color: @urgent;
+    font-size: 14px;
+    background: linear-gradient(135deg, @urgent, @urgent);
+    border-color: @urgent;
+}
+
+#custom-power:hover {
+    background: linear-gradient(135deg, @urgent, @urgent);
+    border-color: @urgent;
+}
+
+/* Tooltip styling */
+tooltip {
+    background: linear-gradient(135deg, @background, @second-background);
+    border: 1px solid @borders;
+    border-radius: 8px;
+    color: @text;
+    font-weight: 500;
+    padding: 6px 10px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 1px 2px;
+}

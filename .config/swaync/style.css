@@ -1,0 +1,14 @@
+/* Matugen → SwayNC */
+
+.notification {
+  background: #101417;
+  color: #dfe3e8;
+  border: 2px solid #94cdf7;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.notification.critical {
+  background: #ffb4ab;
+  color: #690005;
+}

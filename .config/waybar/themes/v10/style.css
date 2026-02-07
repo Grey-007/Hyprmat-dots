@@ -1,0 +1,709 @@
+@import url("colors.css");
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   
+   ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+   ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+   ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+   ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+   ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+    ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+   
+   MATTE EDITION
+   colors.css Integration · Solid · Refined
+   
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+* {
+    all: unset;
+    font-family: 'Google Sans Display', 'Google Sans', 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background: @background;
+    color: @text;
+}
+
+window#waybar.hidden {
+    margin-top: -50px;
+}
+
+window#waybar.empty {
+    background: @background;
+}
+
+.modules-left {
+    background: @second-background;
+    border: 1px solid @color3;
+    border-radius: 10px;
+    margin: 2px 0 2px 2px;
+    padding: 0 4px;
+}
+
+.modules-center {
+    background: @second-background;
+    border: 1px solid @color3;
+    border-radius: 10px;
+    margin: 2px 0;
+    padding: 0 8px;
+}
+
+.modules-right {
+    background: @second-background;
+    border: 1px solid @color3;
+    border-radius: 10px;
+    margin: 2px 2px 2px 0;
+    padding: 0 4px;
+}
+
+tooltip {
+    background: @background;
+    border: 1px solid @color3;
+    border-radius: 8px;
+    padding: 0;
+}
+
+tooltip * {
+    background: @background;
+}
+
+tooltip label {
+    color: @text;
+    font-family: 'Google Sans Display', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 10px;
+    min-width: 30px;
+}
+
+#custom-launcher {
+    background: @color3;
+    color: @text;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 10px;
+    margin: 3px 2px 3px 3px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-launcher:hover {
+    background: @focused;
+    color: @background;
+    padding: 0 12px;
+}
+
+#custom-separator-left {
+    background: @background;
+    color: @color3;
+    font-size: 10px;
+    padding: 0 3px;
+    margin: 0 1px;
+}
+
+#custom-separator-dot {
+    background: @background;
+    color: @color3;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 0 6px;
+    margin: 0;
+}
+
+#workspaces {
+    background: @background;
+    margin: 0 2px;
+    padding: 0;
+    border-radius: 8px;
+}
+
+#workspaces button {
+    background: @background;
+    color: @color3;
+    font-family: 'Google Sans Display', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 6px;
+    min-width: 20px;
+    min-height: 20px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button:hover {
+    background: @color3;
+    color: @text;
+    min-width: 26px;
+}
+
+#workspaces button.active {
+    background: @focused;
+    color: @background;
+    font-weight: 600;
+    min-width: 30px;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+
+#workspaces button.active:hover {
+    background: @focused;
+    color: @background;
+    min-width: 32px;
+}
+
+#workspaces button.empty {
+    color: @color3;
+    min-width: 16px;
+    padding: 0 4px;
+}
+
+#workspaces button.empty:hover {
+    background: @color3;
+    color: @text;
+    min-width: 20px;
+}
+
+#workspaces button.urgent {
+    background: @urgent;
+    color: @background;
+    font-weight: 600;
+}
+
+#workspaces button.visible {
+    color: @text;
+    min-width: 22px;
+}
+
+#workspaces button.focused {
+    background: @focused;
+    color: @background;
+    font-weight: 600;
+}
+
+#clock {
+    background: @background;
+    color: @text;
+    font-family: 'Google Sans Display', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 6px;
+    margin: 3px 0;
+    border-radius: 8px;
+    letter-spacing: 0.3px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#clock:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#custom-media {
+    background: @background;
+    color: @text;
+    font-family: 'Google Sans Display', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 2px;
+    border-radius: 8px;
+    min-width: 200px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-media:hover {
+    background: @color3;
+    color: @text;
+    padding: 0 12px;
+}
+
+#tray {
+    background: @background;
+    color: @text;
+    padding: 0 6px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#tray:hover {
+    background: @color3;
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#tray menu {
+    background: @background;
+    border: 1px solid @color3;
+    border-radius: 8px;
+    padding: 6px 3px;
+}
+
+#tray menu separator {
+    background: @color3;
+    margin: 4px 8px;
+    min-height: 1px;
+}
+
+#tray menu menuitem {
+    background: @background;
+    color: @text;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#tray menu menuitem:hover {
+    background: @color3;
+    color: @text;
+}
+
+#tray menu menuitem:disabled {
+    color: @color3;
+}
+
+#pulseaudio {
+    background: @background;
+    color: @text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#pulseaudio:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#pulseaudio.muted {
+    background: @urgent;
+    color: @background;
+}
+
+#network {
+    background: @background;
+    color: @text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#network:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#network.disconnected {
+    background: @urgent;
+    color: @background;
+}
+
+#network.wifi {
+    color: @text;
+}
+
+#network.ethernet {
+    color: @text;
+}
+
+#bluetooth {
+    background: @background;
+    color: @text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#bluetooth:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @color3;
+}
+
+#bluetooth.connected {
+    background: @focused;
+    color: @background;
+}
+
+#battery {
+    background: @background;
+    color: @text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#battery:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#battery.charging,
+#battery.plugged {
+    background: @color2;
+    color: @background;
+}
+
+#battery.warning:not(.charging) {
+    background: @color2;
+    color: @background;
+}
+
+#battery.critical:not(.charging) {
+    background: @urgent;
+    color: @background;
+}
+
+#power-profiles-daemon {
+    background: @background;
+    color: @text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#power-profiles-daemon:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#power-profiles-daemon.performance {
+    background: @focused;
+    color: @background;
+}
+
+#power-profiles-daemon.balanced {
+    background: @color1;
+    color: @text;
+}
+
+#power-profiles-daemon.power-saver {
+    background: @color2;
+    color: @background;
+}
+
+#custom-power {
+    background: @urgent;
+    color: @background;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 8px;
+    margin: 3px 3px 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-power:hover {
+    background: @urgent;
+    color: @text;
+    padding: 0 10px;
+}
+
+#backlight {
+    background: @background;
+    color: @text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#backlight:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#temperature {
+    background: @background;
+    color: @text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#temperature:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#temperature.warning {
+    background: @color2;
+    color: @background;
+}
+
+#temperature.critical {
+    background: @urgent;
+    color: @background;
+}
+
+#cpu {
+    background: @background;
+    color: @text;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#cpu:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#memory {
+    background: @background;
+    color: @text;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#memory:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#idle_inhibitor {
+    background: @background;
+    color: @color3;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#idle_inhibitor:hover {
+    background: @color3;
+    color: @text;
+    padding: 0 10px;
+}
+
+#idle_inhibitor.activated {
+    color: @text;
+    background: @color1;
+}
+
+#idle_inhibitor.deactivated {
+    color: @color3;
+}
+
+#language {
+    background: @background;
+    color: @text;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#language:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#window {
+    background: @background;
+    color: @text;
+    font-family: 'Google Sans Display', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 2px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#window:hover {
+    background: @color3;
+    color: @text;
+    padding: 0 12px;
+}
+
+#window.empty {
+    background: @background;
+    padding: 0 2px;
+}
+
+#window.floating {
+    font-style: italic;
+}
+
+#custom-cava {
+    background: @background;
+    color: @text;
+    font-family: 'monospace';
+    font-size: 10px;
+    font-weight: 500;
+    padding: 0 6px;
+    margin: 3px 2px;
+    border-radius: 8px;
+    min-width: 60px;
+    letter-spacing: 1px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-cava:hover {
+    background: @color3;
+    color: @text;
+    padding: 0 8px;
+}
+
+#custom-update {
+    background: @background;
+    color: @text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-update:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#custom-update.pending {
+    background: @color2;
+    color: @background;
+}
+
+#custom-way {
+    background: @background;
+    color: @text;
+    font-family: 'Google Sans Display', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 0 8px;
+    margin: 3px 2px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-way:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#custom-way.timer {
+    background: @color1;
+}
+
+#custom-way.pomodoro-work {
+    background: @focused;
+    color: @background;
+}
+
+#custom-way.pomodoro-break {
+    background: @color2;
+    color: @background;
+}
+
+#custom-screenrecording-indicator {
+    background: @background;
+    color: @text;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-screenrecording-indicator:hover {
+    background: @color3;
+    padding: 0 10px;
+}
+
+#custom-screenrecording-indicator.recording {
+    background: @urgent;
+    color: @background;
+}
+
+#custom-tray-toggle {
+    background: @background;
+    color: @text;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-tray-toggle:hover {
+    background: @color3;
+    color: @text;
+    padding: 0 10px;
+}
+
+.tray-child {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window#waybar.fullscreen {
+    background: @background;
+    margin: 0;
+}
+
+window#waybar.fullscreen .modules-left,
+window#waybar.fullscreen .modules-center,
+window#waybar.fullscreen .modules-right {
+    background: @second-background;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+}
