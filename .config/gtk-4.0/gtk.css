@@ -5,32 +5,32 @@
  *                              
  */
 
-@define-color accent_color #c0c1ff;
-@define-color accent_bg_color #3f4178;
-@define-color accent_fg_color #e1e0ff;
+@define-color accent_color #f9ba72;
+@define-color accent_bg_color #663e00;
+@define-color accent_fg_color #ffddba;
 @define-color destructive_color #ffb4ab;
 @define-color destructive_bg_color #93000a;
 @define-color destructive_fg_color #ffdad6;
-@define-color success_color #c5c4dd;
-@define-color success_bg_color #454559;
-@define-color success_fg_color #e2e0f9;
-@define-color warning_color #e8b9d4;
-@define-color warning_bg_color #5f3c52;
-@define-color warning_fg_color #ffd8ed;
+@define-color success_color #e0c1a2;
+@define-color success_bg_color #58432b;
+@define-color success_fg_color #fdddbd;
+@define-color warning_color #bccd9d;
+@define-color warning_bg_color #3e4b27;
+@define-color warning_fg_color #d8e9b7;
 @define-color error_color #ffb4ab;
 @define-color error_bg_color #93000a;
 @define-color error_fg_color #ffdad6;
-@define-color window_bg_color #131318;
-@define-color window_fg_color #e4e1e9;
-@define-color view_bg_color #131318;
-@define-color view_fg_color #e4e1e9;
+@define-color window_bg_color #18120c;
+@define-color window_fg_color #eee0d5;
+@define-color view_bg_color #18120c;
+@define-color view_fg_color #eee0d5;
 @define-color headerbar_bg_color @window_bg_color;
 @define-color headerbar_fg_color @window_fg_color;
 @define-color headerbar_border_color @window_bg_color;
 @define-color headerbar_backdrop_color @window_bg_color;
 @define-color headerbar_shade_color @window_bg_color;
-@define-color card_bg_color #2a292f;
-@define-color card_fg_color #e4e1e9;
+@define-color card_bg_color #302921;
+@define-color card_fg_color #eee0d5;
 @define-color card_shade_color rgba(0, 0, 0, 0.07);
 @define-color dialog_bg_color @card_bg_color;
 @define-color dialog_fg_color @card_fg_color;
@@ -38,7 +38,7 @@
 @define-color popover_fg_color @card_fg_color;
 @define-color shade_color rgba(0, 0, 0, 0.36);
 @define-color scrollbar_outline_color rgba(139, 145, 152, 0.5);
-@define-color sidebar_bg_color #1b1b21;
+@define-color sidebar_bg_color #211a13;
 @define-color secondary_sidebar_bg_color @sidebar_bg_color;
 @define-color sidebar_backdrop_color @sidebar_bg_color;
 @define-color secondary_sidebar_backdrop_color @sidebar_bg_color;
