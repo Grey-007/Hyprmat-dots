@@ -34,9 +34,10 @@ output_path = "/home/grey/.config/kitty/matugen.conf"
 input_path = "/home/grey/.config/matugen/templates/rofi.rasi"
 output_path = "/home/grey/.config/rofi/colors.rasi"
 
-# [templates.swaync]
-# input_path = "/home/grey/.config/matugen/templates/swaync.css"
-# output_path = "/home/grey/.config/swaync/style.css"
+[templates.swaync]
+input_path = "/home/grey/.config/matugen/templates/swaync.css"
+output_path = "/home/grey/.config/swaync/style.css"
+post_hook = 'swaync-client -rs'
 
 [templates.waybar_colors]
 input_path = "/home/grey/.config/matugen/templates/waybar-colors.css"
@@ -72,9 +73,14 @@ output_path = '/home/grey/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
 
 [templates.vscode]
-input_path = '~/.config/matugen/templates/vscode.json'
-output_path = '~/.config/Code/User/settings.json'
+input_path = '/home/grey/.config/matugen/templates/vscode.json'
+output_path = '/home/grey/.config/Code/User/settings.json'
 
 [templates.spicetify]
-input_path = "~/.config/matugen/templates/spicetify.ini"
+input_path = "/home/grey/.config/matugen/templates/spicetify.ini"
 output_path = "~/.config/spicetify/Themes/Matugen/color.ini"
+
+[templates.spotify]
+input_path = "/home/grey/.config/matugen/templates/spotify-color.ini"
+output_path = "/home/grey/.config/spicetify/Themes/Onepunch/color.ini"
+

@@ -1,14 +1,532 @@
-/* Matugen → SwayNC */
+/* 
+ * SwayNC - Matugen Template
+ */
+
+:root {
+  /* ============================================
+     BACKGROUND COLORS
+     ============================================ */
+  
+  /* Primary background (main notification bg, control center) */
+  --bg-primary: {{colors.surface.default.hex}};
+  
+  /* Secondary background (widgets, alternate sections) */
+  --bg-secondary: {{colors.surface_container.default.hex}};
+  
+  /* Tertiary background (deepest level) */
+  --bg-tertiary: {{colors.surface_container_low.default.hex}};
+  
+  /* Notification card background */
+  --bg-notification: {{colors.surface.default.hex}};
+  
+  /* Hover state background */
+  --bg-hover: {{colors.surface_container_high.default.hex}};
+  
+  /* Active/pressed state background */
+  --bg-active: {{colors.surface_container_highest.default.hex}};
+  
+  
+  /* ============================================
+     TEXT COLORS
+     ============================================ */
+  
+  /* Primary text (headings, important text) */
+   --text-primary: {{colors.on_surface.default.hex | lighten: 5}};
+  
+  /* Secondary text (body text, descriptions) */
+  --text-secondary: {{colors.on_surface_variant.default.hex}};
+  
+  /* Tertiary text (less important text) */
+  --text-tertiary: {{colors.outline.default.hex}};
+  
+  /* Dimmed text (timestamps, subtle info) */
+  --text-dim: {{colors.outline_variant.default.hex}};
+  
+  
+  /* ============================================
+     ACCENT COLORS
+     ============================================ */
+  
+  /* Primary accent (normal priority, toggles, links) */
+  --accent-primary: {{colors.primary.default.hex}};
+  
+  /* Secondary accent (low priority, info) */
+  --accent-secondary: {{colors.tertiary.default.hex}};
+  
+  /* Success/positive actions */
+  --accent-success: {{colors.tertiary.default.hex}};
+  
+  /* Warning/caution */
+  --accent-warning: {{colors.secondary.default.hex}};
+  
+  /* Error/critical/destructive actions */
+  --accent-error: {{colors.error.default.hex}};
+  
+  
+  /* ============================================
+     BORDER COLORS
+     ============================================ */
+  
+  /* Primary border (main borders, separators) */
+  --border-primary: {{colors.outline_variant.default.hex}};
+  
+  /* Secondary border (subtle borders) */
+  --border-secondary: {{colors.outline.default.hex}};
+  
+  /* Subtle border (barely visible) */
+  --border-subtle: {{colors.surface_container_highest.default.hex}};
+  
+  
+  /* ============================================
+     SHADOW COLORS
+     ============================================ */
+  
+  /* Standard shadow color */
+  --shadow-color: {{colors.shadow.default.hex | set_lightness: 0.0 | set_alpha: 0.3}};
+  
+  /* Stronger shadow for emphasis */
+  --shadow-color-strong: {{colors.shadow.default.hex | set_lightness: 0.0 | set_alpha: 0.5}};
+  
+  
+  /* ============================================
+     SURFACE/OVERLAY COLORS
+     ============================================ */
+  
+  /* Overlay surfaces (semi-transparent) */
+  --surface-overlay: {{colors.surface.default.hex | set_alpha: 0.95}};
+  
+  /* Tooltip backgrounds */
+  --surface-tooltip: {{colors.surface_container_high.default.hex | set_alpha: 0.98}};
+  
+  
+  /* ============================================
+     BUTTON COLORS
+     ============================================ */
+  
+  /* Button background (default state) */
+  --button-bg: {{colors.surface_container_high.default.hex}};
+  
+  /* Button background (hover state) */
+  --button-bg-hover: {{colors.surface_container_highest.default.hex}};
+  
+  /* Button text color */
+  --button-text: {{colors.on_surface.default.hex}};
+  
+  
+  /* ============================================
+     CLOSE BUTTON COLORS
+     ============================================ */
+  
+  /* Close button background (default) */
+  --close-button-bg: transparent;
+  
+  /* Close button background (hover) */
+  --close-button-hover: {{colors.error.default.hex}};
+  
+  /* Close button text/icon color */
+  --close-button-text: {{colors.outline.default.hex}};
+  
+  
+  /* ============================================
+     SPACING & SIZING
+     ============================================ */
+  
+  /* Border radius for main elements */
+  --border-radius: 8px;
+  
+  /* Border radius for small elements */
+  --border-radius-small: 6px;
+  
+  /* Small spacing */
+  --spacing-small: 8px;
+  
+  /* Medium spacing */
+  --spacing-medium: 12px;
+  
+  /* Large spacing */
+  --spacing-large: 16px;
+  
+  
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
+  
+  /* Fast transitions (hover effects) */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Normal transitions (most animations) */
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   SOURCE COLOR INFO (for reference)
+   ============================================
+   
+   Wallpaper: {{image}}
+   Source Color: {{colors.source_color.default.hex}}
+   Mode: {{mode}}
+   
+   ============================================ */
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+* {
+  all: unset;
+  font-family: "Inter", "Roboto", "Noto Sans", sans-serif;
+  font-size: 14px;
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast),
+              color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+/* ============================================
+   CONTROL CENTER
+   ============================================ */
+
+.control-center {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px var(--shadow-color),
+              0 0 0 1px var(--border-subtle);
+  margin: var(--spacing-medium);
+  padding: 0;
+}
+
+.control-center .widget-title {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  padding: var(--spacing-large);
+  padding-bottom: var(--spacing-medium);
+}
+
+.control-center .widget-dnd {
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-small);
+  margin: var(--spacing-small) var(--spacing-medium);
+  padding: var(--spacing-small);
+}
+
+.control-center .widget-dnd > label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: var(--spacing-small);
+}
+
+.control-center .widget-dnd > switch {
+  background-color: var(--bg-hover);
+  border-radius: 12px;
+  border: 1px solid var(--border-secondary);
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.control-center .widget-dnd > switch:checked {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.control-center .widget-dnd > switch slider {
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 2px;
+}
+
+/* ============================================
+   NOTIFICATION WINDOW
+   ============================================ */
+
+.notification-window {
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-small);
+}
+
+/* ============================================
+   NOTIFICATIONS
+   ============================================ */
 
 .notification {
-  background: {{ colors.background.default.hex }};
-  color: {{ colors.on_background.default.hex }};
-  border: 2px solid {{ colors.primary.default.hex }};
-  border-radius: 12px;
-  padding: 12px;
+  background-color: var(--bg-notification);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px var(--shadow-color),
+              0 0 0 1px var(--border-subtle);
+  margin: var(--spacing-small);
+  padding: 0;
+}
+
+.notification.low {
+  border-left: 3px solid var(--accent-secondary);
+}
+
+.notification.normal {
+  border-left: 3px solid var(--accent-primary);
 }
 
 .notification.critical {
-  background: {{ colors.error.default.hex }};
-  color: {{ colors.on_error.default.hex }};
+  border-left: 3px solid var(--accent-error);
+  animation: pulse-critical 2s ease-in-out infinite;
+}
+
+@keyframes pulse-critical {
+  0%, 100% { box-shadow: 0 2px 6px var(--shadow-color); }
+  50% { box-shadow: 0 2px 12px var(--accent-error); }
+}
+
+/* Notification Content */
+.notification-content {
+  padding: var(--spacing-medium);
+  padding-right: var(--spacing-small);
+}
+
+.notification-row {
+  margin-bottom: var(--spacing-small);
+}
+
+.notification-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary {
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.time {
+  color: var(--text-dim);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.body {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.4;
+  margin-top: var(--spacing-small);
+}
+
+/* App Icon */
+.app-icon {
+  margin-right: var(--spacing-medium);
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.image {
+  border-radius: var(--border-radius-small);
+  margin: var(--spacing-small);
+  margin-top: 0;
+  overflow: hidden;
+}
+
+/* ============================================
+   NOTIFICATION ACTIONS
+   ============================================ */
+
+.notification-action,
+.notification-default-action {
+  background-color: var(--button-bg);
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--border-secondary);
+  color: var(--button-text);
+  margin: var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-weight: 500;
+}
+
+.notification-action:hover,
+.notification-default-action:hover {
+  background-color: var(--button-bg-hover);
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.notification-action:active,
+.notification-default-action:active {
+  background-color: var(--bg-active);
+  box-shadow: inset 0 1px 2px var(--shadow-color);
+}
+
+/* ============================================
+   CLOSE BUTTON
+   ============================================ */
+
+.close-button {
+  background-color: var(--close-button-bg);
+  border-radius: 50%;
+  color: var(--close-button-text);
+  margin: var(--spacing-small);
+  padding: 4px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  background-color: var(--close-button-hover);
+  color: var(--text-primary);
+}
+
+.close-button:active {
+  background-color: var(--accent-error);
+}
+
+/* ============================================
+   CONTROL CENTER NOTIFICATIONS LIST
+   ============================================ */
+
+.notification-group {
+  margin: 0;
+  padding: var(--spacing-small);
+}
+
+.notification-group-header {
+  color: var(--text-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: var(--spacing-small) var(--spacing-medium);
+  margin-top: var(--spacing-small);
+}
+
+.notification-group-collapse-button {
+  background-color: transparent;
+  border-radius: var(--border-radius-small);
+  color: var(--text-tertiary);
+  padding: 4px;
+  margin-right: var(--spacing-small);
+}
+
+.notification-group-collapse-button:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.notification-group-count {
+  background-color: var(--accent-primary);
+  border-radius: 12px;
+  color: var(--bg-primary);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  margin-left: var(--spacing-small);
+}
+
+/* ============================================
+   BUTTONS & CONTROLS
+   ============================================ */
+
+button {
+  background-color: var(--button-bg);
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--border-secondary);
+  color: var(--button-text);
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-bg-hover);
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+button:active {
+  background-color: var(--bg-active);
+  box-shadow: inset 0 1px 2px var(--shadow-color);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   WIDGETS
+   ============================================ */
+
+.widget {
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-small) var(--spacing-medium);
+  padding: var(--spacing-medium);
+}
+
+.widget > box > label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+
+scrollbar slider {
+  background-color: var(--bg-hover);
+  border-radius: 4px;
+  min-width: 6px;
+}
+
+scrollbar slider:hover {
+  background-color: var(--bg-active);
+}
+
+/* ============================================
+   BLANK WINDOW (No notifications)
+   ============================================ */
+
+.blank-window {
+  background-color: transparent;
+}
+
+.blank-window label {
+  color: var(--text-dim);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.floating-notifications {
+  background-color: transparent;
+}
+
+/* Opacity states */
+.notification.dimmed {
+  opacity: 0.7;
+}
+
+/* Focus states */
+.notification:focus,
+button:focus {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 500px) {
+  .control-center {
+    margin: var(--spacing-small);
+  }
+  
+  .notification {
+    margin: 4px;
+  }
 }
