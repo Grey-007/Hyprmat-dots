@@ -39,7 +39,7 @@ HyprMat focuses on:
 | ![](./assets/screenshots/ss4.png) | ![](./assets/screenshots/ss5.png) | ![](./assets/screenshots/ss6.png) |
 | ![](./assets/screenshots/ss7.png) | ![](./assets/screenshots/ss8.png) | ![](./assets/screenshots/ss9.png) |
 
-
+Wallpaper repo: [wallpapers](https://github.com/Grey-007/Wallpapers.git)
 ---
 
 ## ✅ Features & Components
