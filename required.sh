@@ -88,6 +88,11 @@ PKGS=(
   blueman
   brightnessctl
   power-profiles-daemon
+  network-manager-applet
+  wpa_supplicant
+  wireless_tools
+  gnome-keyring
+
 
   kitty
   waybar
@@ -95,6 +100,7 @@ PKGS=(
   cava
   nwg-look
   swww
+  rofi-wayland
 
   nautilus
   gvfs
@@ -132,15 +138,6 @@ FONTS=(
 
 echo "🔤 Installing fonts..."
 sudo pacman -S --needed --noconfirm "${FONTS[@]}"
-
-# ------------------------
-# Rofi pinned version
-# ------------------------
-
-echo "🎯 Installing Rofi 1.7.5..."
-cd /tmp || exit 1
-wget https://archive.archlinux.org/packages/r/rofi/rofi-1.7.5-1-x86_64.pkg.tar.zst
-sudo pacman -U --noconfirm rofi-1.7.5-1-x86_64.pkg.tar.zst
 
 # ------------------------
 # AUR packages
