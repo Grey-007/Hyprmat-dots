@@ -1,8 +1,8 @@
 ## 🌌 HyprMat
-![GitHub stars](https://img.shields.io/github/stars/Grey-007/Hyprmat-dots?style=for-the-badge&label=STARS&labelColor=81C784&color=424242)
-![GitHub issues](https://img.shields.io/github/issues/Grey-007/Hyprmat-dots?style=for-the-badge&label=ISSUES&labelColor=81C784&color=424242)
-![Repo size](https://img.shields.io/github/repo-size/Grey-007/Hyprmat-dots?style=for-the-badge&label=REPO%20SIZE&labelColor=81C784&color=424242)
-![Visitors](https://komarev.com/ghpvc/?username=Grey-007&repo=Hyprmat-dots&style=for-the-badge&label=VISITORS&labelColor=81C784&color=424242)
+![GitHub stars](https://img.shields.io/github/stars/Grey-007/Hyprmat-dots?style=for-the-badge&label=STARS&labelColor=0A0F0D&color=3CBBB1)
+![GitHub issues](https://img.shields.io/github/issues/Grey-007/Hyprmat-dots?style=for-the-badge&label=ISSUES&labelColor=0A0F0D&color=3CBBB1)
+![Repo size](https://img.shields.io/github/repo-size/Grey-007/Hyprmat-dots?style=for-the-badge&label=REPO%20SIZE&labelColor=0A0F0D&color=3CBBB1)
+![Visitors](https://komarev.com/ghpvc/?username=Grey-007&repo=Hyprmat-dots&style=for-the-badge&label=VIEWS&labelColor=0A0F0D&color=3CBBB1)
 
 ---
 A complete, wallpaper-driven Hyprland rice powered by Matugen 
