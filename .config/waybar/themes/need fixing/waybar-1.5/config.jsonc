@@ -3,33 +3,11 @@
   "layer": "top",
   "position": "left",
   
-  "modules-left": [ "custom/omarchy", "hyprland/workspaces"],
-  "modules-center": [ "clock", "custom/update" ],
-  "modules-right": [ "group/tray-expander", "backlight", "network", "pulseaudio", "bluetooth", "battery"],
-
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
-      "default": "",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "active": "󱓻"
-    },
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
-    }
+  "custom/omarchy": {
+    "format": "",
+    "on-click": "wofi --show drun",
+    "on-click-right": "foot",
+    "tooltip-format": "Applications"
   },
 
   "network": {
@@ -43,24 +21,24 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "alacritty --class=Impala -e impala"
+    "on-click": "nm-connection-editor"
   },
   "custom/omarchy": {
-    "format": "<span font='omarchy'>\ue900</span>",
-    "on-click": "~/.local/share/omarchy/bin/omarchy-menu",
-    "tooltip-format": "SUPER + ALT + SPACE"
+    "format": "",
+    "on-click": "wofi --show drun",
+    "tooltip-format": "Applications"
   },
   "custom/update": {
-    "format": "",
-    "exec": "omarchy-update-available",
-    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
-    "tooltip-format": "Omarchy update available",
+    "format": " {}",
+    "exec": "sh -c '(checkupdates 2>/dev/null || pacman -Qu 2>/dev/null) | wc -l'",
+    "on-click": "foot -e sh -lc 'checkupdates 2>/dev/null || pacman -Qu 2>/dev/null; read -r -p close _'",
+    "tooltip-format": "System updates available",
     "interval": 3600
   },
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "alacritty -e btop"
+    "on-click": "foot -e btop"
   },
   "clock": {    
     "format": "{0:%H}\r{0:%M}\r\r{0:%d}\r--\r{0:%m}\r--\r{0:%y}",
@@ -68,28 +46,20 @@
     "calendar": {
       "mode": "mouth",
       "mode-mon-col": 3,
-      "on-click-right": "mode",
+    "on-click-right": "sh -c 'notify-send Timezone $(timedatectl show --property=Timezone --value)'",
       "format": {
         "mouth": "<span color='#ffead3'><b>{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
         "today": "<span color='#ff6699'><b>{}</b></span>"
       }
     },
-    "on-click-right": "~/.local/share/omarchy/bin/omarchy-cmd-tzupdate"
+    "on-click-right": "sh -c 'notify-send "Timezone" "$(timedatectl show --property=Timezone --value)"'"
   },
   "battery": {
     "format": "{capacity}% {icon}",
     "format-discharging": "{icon}",
     "format-charging":    "{icon}",
     "format-plugged":     "",
-    "format-icons": {
-      "charging": [
-        "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"
-      ],
-      "default": [
-        "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
-      ]
-    },
     "format-full": "󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
@@ -104,18 +74,15 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueberry"
+    "on-click": "blueman-manager"
   },
   "pulseaudio": {
-    "format": "{icon}",
-    "on-click": "alacritty --class=Wiremix -e wiremix",
+    "format": " {volume}%",
+    "on-click": "pavucontrol",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
     "format-muted": "󰝟",
-    "format-icons": {
-      "default": ["", "", ""]
-    }
   },
   
   "backlight": {
@@ -151,7 +118,7 @@
   "memory": { 
     "format": "",
     "interval": 2,
-    "on-click": "alacritty -e btop"
+    "on-click": "foot -e btop"
   },
   "custom/weather": {
     "format": "{}°",

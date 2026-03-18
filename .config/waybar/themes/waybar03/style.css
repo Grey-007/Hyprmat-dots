@@ -31,7 +31,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    color: @borders;
+    color: @text;
 }
 
 #workspaces button.focused {

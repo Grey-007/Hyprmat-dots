@@ -1,6 +1,7 @@
+@import url("/home/Grey2/.config/waybar/colors.css");
+@define-color foreground @text;
 @define-color base-bg @background;
 @define-color accent @foreground;
-@import "../omarchy/current/theme/waybar.css";
 
 @define-color hover-bg alpha(@background, 0.7);
 @define-color warning #e5c07b;

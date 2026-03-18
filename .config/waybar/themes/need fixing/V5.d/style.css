@@ -1,4 +1,5 @@
-@import "../omarchy/current/theme/waybar.css";
+@import url("/home/Grey2/.config/waybar/colors.css");
+@define-color foreground @text;
 
 
 

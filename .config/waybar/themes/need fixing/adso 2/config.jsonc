@@ -4,64 +4,29 @@
   "spacing": 10,
   "height": 32,
   "modules-left": [
-    "custom/omarchy", "hyprland/workspaces"
-  ],
-  "modules-center": [
-    "wlr/taskbar" 
-  ],
-  "modules-right": [
-    "group/tray-expander",
-    "backlight",
-    "network",
-    "bluetooth",
-    "pulseaudio",
-    "cpu",
-    "battery",
-    "clock"
-  ],
-
-    "hyprland/workspaces": {
-    "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
-      "default": "",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "active": "󱓻"
+    "custom/omarchy": {
+      "format": "",
+      "on-click": "wofi --show drun",
+      "on-click-right": "foot",
+      "tooltip-format": "Applications"
     },
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
-    }
-  },
 
   "custom/omarchy": {
-    "format": "<span font='omarchy'>\ue900</span>",
-    "on-click": "omarchy-menu",
-    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
+    "format": "",
+    "on-click": "wofi --show drun",
+    "tooltip-format": "Applications"
   },
   "custom/update": {
-    "format": "",
-    "exec": "omarchy-update-available",
-    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
-    "tooltip-format": "Omarchy update available",
-    "signal": 7,
+    "format": " {}",
+    "exec": "sh -c '(checkupdates 2>/dev/null || pacman -Qu 2>/dev/null) | wc -l'",
+    "on-click": "foot -e sh -lc 'checkupdates 2>/dev/null || pacman -Qu 2>/dev/null; read -r -p close _'",
+    "tooltip-format": "System updates available",
     "interval": 3600
   },
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "$TERMINAL -e btop"
+    "on-click": "foot -e btop"
   },
   "clock": {
     "format": "{:%I:%M %p}",
@@ -70,14 +35,14 @@
     "calendar": {
       "mode": "mouth",
       "mode-mon-col": 3,
-      "on-click-right": "mode",
+    "on-click-right": "sh -c 'notify-send Timezone $(timedatectl show --property=Timezone --value)'",
       "format": {
         "mouth": "<span color='#ffead3'><b>{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
         "today": "<span color='#ff6699'><b>{}</b></span>",
       },
     },
-    "on-click-right": "~/.local/share/omarchy/bin/omarchy-cmd-tzupdate"
+    "on-click-right": "sh -c 'notify-send "Timezone" "$(timedatectl show --property=Timezone --value)"'"
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -90,22 +55,17 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi"
+    "on-click": "nm-connection-editor"
   },
   "battery": {
     "format": "{capacity}% {icon}",
     "format-discharging": "{icon}",
     "format-charging": "{icon}",
     "format-plugged": "",
-    "format-icons": {
-      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
     "format-full": "󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
-    "interval": 5,
-    "on-click": "omarchy-menu power",
+    "interval": 5,Lock\nLogout\nSuspend\nReboot\nPoweroff" | wofi --dmenu -p Power); case "$choice" in Lock) loginctl lock-session ;; Logout) hyprctl dispatch exit ;; Suspend) systemctl suspend ;; Reboot) systemctl reboot ;; Poweroff) systemctl poweroff ;; esac'",
     "states": {
       "warning": 20,
       "critical": 10
@@ -116,18 +76,15 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueberry"
+    "on-click": "blueman-manager"
   },
   "pulseaudio": {
-    "format": "{icon}",
-    "on-click": "$TERMINAL --class=Wiremix -e wiremix",
+    "format": " {volume}%",
+    "on-click": "pavucontrol",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
     "format-muted": "",
-    "format-icons": {
-      "default": ["", "", ""]
-    }
   },
   "group/tray-expander": {
     "orientation": "inherit",
@@ -142,8 +99,8 @@
     "tooltip": false
   },
   "custom/screenrecording-indicator": {
-    "on-click": "omarchy-cmd-screenrecord",
-    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "on-click": "sh -c 'pkill -INT gpu-screen-recorder || notify-send "Screen recording" "Start gpu-screen-recorder separately to record"'",
+    "exec": "sh -c 'if pgrep -x gpu-screen-recorder >/dev/null; then printf "{\"text\":\"\",\"class\":\"active\"}"; fi'",
     "signal": 8,
     "return-type": "json"
   },
@@ -162,7 +119,7 @@
   "memory": {
       "format": " {used:0.1f}gb",
       "interval": 2,
-      "on-click": "$TERMINAL -e btop"
+      "on-click": "foot -e btop"
   },
 
   "custom/weather": {
