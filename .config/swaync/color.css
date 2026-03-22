@@ -1,5 +1,5 @@
 /* 
- * SwayNC Color Variables - Matugen Template
+ * SwayNC - Matugen Template
  */
 
 :root {
@@ -8,22 +8,22 @@
      ============================================ */
   
   /* Primary background (main notification bg, control center) */
-  --bg-primary: #17130b;
+  --bg-primary: #111318;
   
   /* Secondary background (widgets, alternate sections) */
-  --bg-secondary: #241f17;
+  --bg-secondary: #1e1f25;
   
   /* Tertiary background (deepest level) */
-  --bg-tertiary: #201b13;
+  --bg-tertiary: #1a1b20;
   
   /* Notification card background */
-  --bg-notification: #17130b;
+  --bg-notification: #111318;
   
   /* Hover state background */
-  --bg-hover: #2e2921;
+  --bg-hover: #282a2f;
   
   /* Active/pressed state background */
-  --bg-active: #3a342b;
+  --bg-active: #33353a;
   
   
   /* ============================================
@@ -31,16 +31,16 @@
      ============================================ */
   
   /* Primary text (headings, important text) */
-   --text-primary: #f3ede5;
+   --text-primary: #f1f1f4;
   
   /* Secondary text (body text, descriptions) */
-  --text-secondary: #d1c5b4;
+  --text-secondary: #c4c6d0;
   
   /* Tertiary text (less important text) */
-  --text-tertiary: #9a8f80;
+  --text-tertiary: #8e9099;
   
   /* Dimmed text (timestamps, subtle info) */
-  --text-dim: #4e4639;
+  --text-dim: #44474f;
   
   
   /* ============================================
@@ -48,16 +48,16 @@
      ============================================ */
   
   /* Primary accent (normal priority, toggles, links) */
-  --accent-primary: #ecc06c;
+  --accent-primary: #adc6ff;
   
   /* Secondary accent (low priority, info) */
-  --accent-secondary: #b2cfa7;
+  --accent-secondary: #debcdf;
   
   /* Success/positive actions */
-  --accent-success: #b2cfa7;
+  --accent-success: #debcdf;
   
   /* Warning/caution */
-  --accent-warning: #d9c4a0;
+  --accent-warning: #bfc6dc;
   
   /* Error/critical/destructive actions */
   --accent-error: #ffb4ab;
@@ -68,13 +68,13 @@
      ============================================ */
   
   /* Primary border (main borders, separators) */
-  --border-primary: #4e4639;
+  --border-primary: #44474f;
   
   /* Secondary border (subtle borders) */
-  --border-secondary: #9a8f80;
+  --border-secondary: #8e9099;
   
   /* Subtle border (barely visible) */
-  --border-subtle: #3a342b;
+  --border-subtle: #33353a;
   
   
   /* ============================================
@@ -93,10 +93,10 @@
      ============================================ */
   
   /* Overlay surfaces (semi-transparent) */
-  --surface-overlay: #17130b;
+  --surface-overlay: #111318;
   
   /* Tooltip backgrounds */
-  --surface-tooltip: #2e2921;
+  --surface-tooltip: #282a2f;
   
   
   /* ============================================
@@ -104,13 +104,13 @@
      ============================================ */
   
   /* Button background (default state) */
-  --button-bg: #2e2921;
+  --button-bg: #282a2f;
   
   /* Button background (hover state) */
-  --button-bg-hover: #3a342b;
+  --button-bg-hover: #33353a;
   
   /* Button text color */
-  --button-text: #ebe1d4;
+  --button-text: #e2e2e9;
   
   
   /* ============================================
@@ -124,7 +124,7 @@
   --close-button-hover: #ffb4ab;
   
   /* Close button text/icon color */
-  --close-button-text: #9a8f80;
+  --close-button-text: #8e9099;
   
   
   /* ============================================
@@ -162,8 +162,8 @@
    SOURCE COLOR INFO (for reference)
    ============================================
    
-   Wallpaper: /home/grey/Wallpaper/Bg033.jpg
-   Source Color: #ecddc7
+   Wallpaper: /home/Grey2/Wallpaper/Bg294.JPG
+   Source Color: #4285f4
    Mode: dark
    
    ============================================ */

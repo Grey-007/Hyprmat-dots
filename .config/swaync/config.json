@@ -1,102 +1,90 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
-  
+  "ignore-gtk-theme": true,
   "positionX": "right",
   "positionY": "top",
+  "control-center-positionX": "right",
+  "control-center-positionY": "top",
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
-  "cssPriority": "application",
-  "control-center-margin-top": 10,
-  "control-center-margin-bottom": 10,
-  "control-center-margin-right": 10,
+  "layer-shell-cover-screen": true,
+  "control-center-exclusive-zone": false,
+  "cssPriority": "user",
+  "control-center-margin-top": 8,
+  "control-center-margin-bottom": 8,
+  "control-center-margin-right": 8,
   "control-center-margin-left": 0,
   "notification-2fa-action": true,
   "notification-inline-replies": false,
-  "notification-icon-size": 64,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
-  "timeout": 5,
-  "timeout-low": 3,
-  "timeout-critical": 10,
+  "timeout": 6,
+  "timeout-low": 4,
+  "timeout-critical": 0,
   "fit-to-screen": true,
   "relative-timestamps": true,
-  "control-center-width": 400,
-  "control-center-height": 500,
-  "notification-window-width": 380,
+  "control-center-width": 320,
+  "control-center-height": 820,
+  "notification-window-width": 308,
+  "notification-window-height": 150,
   "keyboard-shortcuts": true,
+  "notification-grouping": true,
   "image-visibility": "when-available",
-  "transition-time": 200,
+  "transition-time": 140,
   "hide-on-clear": false,
   "hide-on-action": true,
+  "text-empty": "Nothing new",
   "script-fail-notify": true,
-  
-  "notification-visibility": {
-    "example-name": {
-      "state": "muted",
-      "urgency": "Low",
-      "app-name": "Spotify"
-    }
-  },
-  
   "widgets": [
-    "title",
-    "dnd",
+    "title#cc-header",
+    "dnd#cc-dnd",
+    "notifications",
     "mpris",
-    "notifications"
+    "slider#media-progress",
+    "volume",
+    "backlight"
   ],
-  
   "widget-config": {
-    "title": {
-      "text": "Notifications",
+    "title#cc-header": {
+      "text": " NOTIFS",
       "clear-all-button": true,
-      "button-text": "Clear All"
+      "button-text": "󰎟"
     },
-    "dnd": {
-      "text": "Do Not Disturb"
+    "dnd#cc-dnd": {
+      "text": " DND"
     },
-    "label": {
-      "max-lines": 5,
-      "text": "Notification Center"
+    "notifications": {
+      "vexpand": true
     },
     "mpris": {
-      "image-size": 96,
-      "image-radius": 8,
-      "blur": false
+      "show-album-art": "when-available",
+      "autohide": false,
+      "blacklist": [],
+      "loop-carousel": true
+    },
+    "slider#media-progress": {
+      "label": "TRACK",
+      "cmd_setter": "sh -c 'len=$(playerctl metadata mpris:length 2>/dev/null || echo 0); if [ \"$len\" -gt 0 ]; then playerctl position \"$(awk -v l=\"$len\" -v v=\"$value\" '\\''BEGIN { printf \"%.3f\", (l / 1000000) * v / 100 }'\\'')\"; fi'",
+      "cmd_getter": "sh -c 'pos=$(playerctl position 2>/dev/null || echo 0); len=$(playerctl metadata mpris:length 2>/dev/null || echo 0); awk -v p=\"$pos\" -v l=\"$len\" '\\''BEGIN { if (l <= 0) print 0; else printf \"%.0f\", (p / (l / 1000000)) * 100 }'\\'''",
+      "min": 0,
+      "max": 100,
+      "min_limit": 0,
+      "max_limit": 100,
+      "value_scale": 0
     },
     "volume": {
-      "label": "󰕾",
-      "show-per-app": false
+      "label": " VOL",
+      "show-per-app": false,
+      "show-per-app-icon": true,
+      "show-per-app-label": false,
+      "expand-per-app": false
     },
     "backlight": {
-      "label": "󰃟"
-    },
-    "menubar": {
-      "menu#power-buttons": {
-        "label": "⏻",
-        "position": "right",
-        "actions": [
-          {
-            "label": " Suspend",
-            "command": "systemctl suspend"
-          },
-          {
-            "label": " Reboot",
-            "command": "systemctl reboot"
-          },
-          {
-            "label": " Shutdown",
-            "command": "systemctl poweroff"
-          }
-        ]
-      }
-    }
-  },
-  
-  "scripts": {
-    "example-script": {
-      "exec": "echo 'Example script executed'",
-      "urgency": "Normal"
+      "label": "󰃟 BRT",
+      "device": "intel_backlight",
+      "subsystem": "backlight",
+      "min": 1
     }
   }
 }

@@ -1,532 +1,504 @@
-/* 
- * SwayNC - Matugen Template
- */
+@import "color.css";
 
 :root {
-  /* ============================================
-     BACKGROUND COLORS
-     ============================================ */
-  
-  /* Primary background (main notification bg, control center) */
-  --bg-primary: #101510;
-  
-  /* Secondary background (widgets, alternate sections) */
-  --bg-secondary: #1c211c;
-  
-  /* Tertiary background (deepest level) */
-  --bg-tertiary: #181d18;
-  
-  /* Notification card background */
-  --bg-notification: #101510;
-  
-  /* Hover state background */
-  --bg-hover: #272b26;
-  
-  /* Active/pressed state background */
-  --bg-active: #313630;
-  
-  
-  /* ============================================
-     TEXT COLORS
-     ============================================ */
-  
-  /* Primary text (headings, important text) */
-   --text-primary: #edefea;
-  
-  /* Secondary text (body text, descriptions) */
-  --text-secondary: #c2c9bd;
-  
-  /* Tertiary text (less important text) */
-  --text-tertiary: #8c9389;
-  
-  /* Dimmed text (timestamps, subtle info) */
-  --text-dim: #424940;
-  
-  
-  /* ============================================
-     ACCENT COLORS
-     ============================================ */
-  
-  /* Primary accent (normal priority, toggles, links) */
-  --accent-primary: #9dd49e;
-  
-  /* Secondary accent (low priority, info) */
-  --accent-secondary: #a1ced6;
-  
-  /* Success/positive actions */
-  --accent-success: #a1ced6;
-  
-  /* Warning/caution */
-  --accent-warning: #b8ccb5;
-  
-  /* Error/critical/destructive actions */
-  --accent-error: #ffb4ab;
-  
-  
-  /* ============================================
-     BORDER COLORS
-     ============================================ */
-  
-  /* Primary border (main borders, separators) */
-  --border-primary: #424940;
-  
-  /* Secondary border (subtle borders) */
-  --border-secondary: #8c9389;
-  
-  /* Subtle border (barely visible) */
-  --border-subtle: #313630;
-  
-  
-  /* ============================================
-     SHADOW COLORS
-     ============================================ */
-  
-  /* Standard shadow color */
-  --shadow-color: #000000;
-  
-  /* Stronger shadow for emphasis */
-  --shadow-color-strong: #000000;
-  
-  
-  /* ============================================
-     SURFACE/OVERLAY COLORS
-     ============================================ */
-  
-  /* Overlay surfaces (semi-transparent) */
-  --surface-overlay: #101510;
-  
-  /* Tooltip backgrounds */
-  --surface-tooltip: #272b26;
-  
-  
-  /* ============================================
-     BUTTON COLORS
-     ============================================ */
-  
-  /* Button background (default state) */
-  --button-bg: #272b26;
-  
-  /* Button background (hover state) */
-  --button-bg-hover: #313630;
-  
-  /* Button text color */
-  --button-text: #e0e4db;
-  
-  
-  /* ============================================
-     CLOSE BUTTON COLORS
-     ============================================ */
-  
-  /* Close button background (default) */
-  --close-button-bg: transparent;
-  
-  /* Close button background (hover) */
-  --close-button-hover: #ffb4ab;
-  
-  /* Close button text/icon color */
-  --close-button-text: #8c9389;
-  
-  
-  /* ============================================
-     SPACING & SIZING
-     ============================================ */
-  
-  /* Border radius for main elements */
-  --border-radius: 8px;
-  
-  /* Border radius for small elements */
-  --border-radius-small: 6px;
-  
-  /* Small spacing */
-  --spacing-small: 8px;
-  
-  /* Medium spacing */
-  --spacing-medium: 12px;
-  
-  /* Large spacing */
-  --spacing-large: 16px;
-  
-  
-  /* ============================================
-     TRANSITIONS
-     ============================================ */
-  
-  /* Fast transitions (hover effects) */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* Normal transitions (most animations) */
-  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  --bg: var(--bg-primary);
+  --bg-alt: var(--bg-secondary);
+  --bg-soft: var(--bg-tertiary);
+  --hover-bg: var(--bg-hover);
 
-/* ============================================
-   SOURCE COLOR INFO (for reference)
-   ============================================
-   
-   Wallpaper: /home/grey/Wallpaper/Bg230.JPG
-   Source Color: #43814a
-   Mode: dark
-   
-   ============================================ */
-/* ============================================
-   GLOBAL STYLES
-   ============================================ */
+  --fg: var(--text-primary);
+  --fg-muted: var(--text-secondary);
+  --fg-soft: var(--text-tertiary);
+  --fg-disabled: var(--text-dim);
+
+  --accent: var(--accent-primary);
+  --accent-soft: var(--accent-secondary);
+  --success: var(--accent-success);
+  --warning: var(--accent-warning);
+  --danger: var(--accent-error);
+
+  --line: var(--border-primary);
+  --line-soft: var(--border-subtle);
+
+  --border-radius: 2px;
+  --notification-icon-size: 48px;
+  --notification-app-icon-size: 16px;
+  --notification-group-icon-size: 24px;
+  --widget-volume-row-icon-size: 18px;
+  --mpris-album-art-icon-size: 68px;
+  --font-size-body: 10pt;
+  --font-size-summary: 10pt;
+
+  --border: 1px solid var(--line);
+  --hover-tranistion: background 0.15s ease-in-out, color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  --group-collapse-tranistion: opacity 220ms ease-in-out;
+  --hover-transition: var(--hover-tranistion);
+  --group-collapse-transition: var(--group-collapse-tranistion);
+
+  --cc-bg: var(--bg);
+  --noti-border-color: var(--line);
+  --noti-bg: 23, 19, 11;
+  --noti-bg-alpha: 1;
+  --noti-bg-darker: var(--bg);
+  --noti-bg-hover: var(--hover-bg);
+  --noti-bg-focus: var(--bg-alt);
+  --noti-close-bg: var(--danger);
+  --noti-close-bg-hover: var(--accent);
+  --text-color: var(--fg);
+  --text-color-disabled: var(--fg-disabled);
+  --bg-selected: var(--accent-soft);
+
+  --mpris-album-art-overlay: rgba(0, 0, 0, 0.65);
+  --mpris-button-hover: var(--accent);
+  --mpris-album-art-shadow: none;
+}
 
 * {
-  all: unset;
-  font-family: "Inter", "Roboto", "Noto Sans", sans-serif;
-  font-size: 14px;
-  transition: background-color var(--transition-fast),
-              border-color var(--transition-fast),
-              color var(--transition-fast),
-              box-shadow var(--transition-fast);
-}
-
-/* ============================================
-   CONTROL CENTER
-   ============================================ */
-
-.control-center {
-  background-color: var(--bg-primary);
-  border: 1px solid var(--border-primary);
+  font-family: "Iosevka Term Nerd Font", "JetBrainsMono Nerd Font", "Noto Sans Mono", monospace;
+  font-weight: 700;
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 8px var(--shadow-color),
-              0 0 0 1px var(--border-subtle);
-  margin: var(--spacing-medium);
-  padding: 0;
+  box-shadow: none;
 }
 
-.control-center .widget-title {
-  color: var(--text-primary);
-  font-size: 16px;
-  font-weight: 600;
-  padding: var(--spacing-large);
-  padding-bottom: var(--spacing-medium);
+*:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-.control-center .widget-dnd {
-  background-color: var(--bg-secondary);
-  border-radius: var(--border-radius-small);
-  margin: var(--spacing-small) var(--spacing-medium);
-  padding: var(--spacing-small);
+scrollbar,
+scrollbar slider {
+  background: transparent;
+  min-height: 0;
+  min-width: 0;
+  opacity: 0;
 }
 
-.control-center .widget-dnd > label {
-  color: var(--text-secondary);
-  font-weight: 500;
-  padding: var(--spacing-small);
+notificationwindow,
+blankwindow,
+.blank-window,
+.floating-notifications {
+  background: transparent;
 }
-
-.control-center .widget-dnd > switch {
-  background-color: var(--bg-hover);
-  border-radius: 12px;
-  border: 1px solid var(--border-secondary);
-  min-width: 48px;
-  min-height: 24px;
-}
-
-.control-center .widget-dnd > switch:checked {
-  background-color: var(--accent-primary);
-  border-color: var(--accent-primary);
-}
-
-.control-center .widget-dnd > switch slider {
-  background-color: var(--text-primary);
-  border-radius: 50%;
-  min-width: 18px;
-  min-height: 18px;
-  margin: 2px;
-}
-
-/* ============================================
-   NOTIFICATION WINDOW
-   ============================================ */
-
-.notification-window {
-  background-color: transparent;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-small);
-}
-
-/* ============================================
-   NOTIFICATIONS
-   ============================================ */
-
-.notification {
-  background-color: var(--bg-notification);
-  border: 1px solid var(--border-primary);
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 6px var(--shadow-color),
-              0 0 0 1px var(--border-subtle);
-  margin: var(--spacing-small);
-  padding: 0;
-}
-
-.notification.low {
-  border-left: 3px solid var(--accent-secondary);
-}
-
-.notification.normal {
-  border-left: 3px solid var(--accent-primary);
-}
-
-.notification.critical {
-  border-left: 3px solid var(--accent-error);
-  animation: pulse-critical 2s ease-in-out infinite;
-}
-
-@keyframes pulse-critical {
-  0%, 100% { box-shadow: 0 2px 6px var(--shadow-color); }
-  50% { box-shadow: 0 2px 12px var(--accent-error); }
-}
-
-/* Notification Content */
-.notification-content {
-  padding: var(--spacing-medium);
-  padding-right: var(--spacing-small);
-}
-
-.notification-row {
-  margin-bottom: var(--spacing-small);
-}
-
-.notification-row:last-child {
-  margin-bottom: 0;
-}
-
-.summary {
-  color: var(--text-primary);
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.time {
-  color: var(--text-dim);
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.body {
-  color: var(--text-secondary);
-  font-size: 13px;
-  line-height: 1.4;
-  margin-top: var(--spacing-small);
-}
-
-/* App Icon */
-.app-icon {
-  margin-right: var(--spacing-medium);
-  min-width: 32px;
-  min-height: 32px;
-}
-
-.image {
-  border-radius: var(--border-radius-small);
-  margin: var(--spacing-small);
-  margin-top: 0;
-  overflow: hidden;
-}
-
-/* ============================================
-   NOTIFICATION ACTIONS
-   ============================================ */
-
-.notification-action,
-.notification-default-action {
-  background-color: var(--button-bg);
-  border-radius: var(--border-radius-small);
-  border: 1px solid var(--border-secondary);
-  color: var(--button-text);
-  margin: var(--spacing-small);
-  padding: var(--spacing-small) var(--spacing-medium);
-  font-weight: 500;
-}
-
-.notification-action:hover,
-.notification-default-action:hover {
-  background-color: var(--button-bg-hover);
-  box-shadow: 0 1px 3px var(--shadow-color);
-}
-
-.notification-action:active,
-.notification-default-action:active {
-  background-color: var(--bg-active);
-  box-shadow: inset 0 1px 2px var(--shadow-color);
-}
-
-/* ============================================
-   CLOSE BUTTON
-   ============================================ */
 
 .close-button {
-  background-color: var(--close-button-bg);
-  border-radius: 50%;
-  color: var(--close-button-text);
-  margin: var(--spacing-small);
-  padding: 4px;
-  min-width: 24px;
-  min-height: 24px;
+  background: var(--noti-close-bg);
+  border: none;
+  color: var(--bg);
+  margin-right: 4px;
+  margin-top: 4px;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 0;
 }
 
 .close-button:hover {
-  background-color: var(--close-button-hover);
-  color: var(--text-primary);
+  background: var(--noti-close-bg-hover);
+  color: var(--bg);
 }
 
-.close-button:active {
-  background-color: var(--accent-error);
+.notification-row {
+  background: transparent;
+  outline: none;
 }
 
-/* ============================================
-   CONTROL CENTER NOTIFICATIONS LIST
-   ============================================ */
-
-.notification-group {
-  margin: 0;
-  padding: var(--spacing-small);
+.notification-row:focus,
+.notification-group:focus {
+  background: var(--noti-bg-focus);
 }
 
-.notification-group-header {
-  color: var(--text-tertiary);
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: var(--spacing-small) var(--spacing-medium);
-  margin-top: var(--spacing-small);
+.notification-row .notification-background {
+  padding: 5px 8px;
 }
 
-.notification-group-collapse-button {
-  background-color: transparent;
-  border-radius: var(--border-radius-small);
-  color: var(--text-tertiary);
-  padding: 4px;
-  margin-right: var(--spacing-small);
+.notification-row .notification-background .notification {
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  padding: 0;
+  transition: var(--hover-tranistion);
 }
 
-.notification-group-collapse-button:hover {
-  background-color: var(--bg-hover);
-  color: var(--text-primary);
-}
-
-.notification-group-count {
-  background-color: var(--accent-primary);
-  border-radius: 12px;
-  color: var(--bg-primary);
-  font-size: 11px;
-  font-weight: 700;
-  padding: 2px 8px;
-  margin-left: var(--spacing-small);
-}
-
-/* ============================================
-   BUTTONS & CONTROLS
-   ============================================ */
-
-button {
-  background-color: var(--button-bg);
-  border-radius: var(--border-radius-small);
-  border: 1px solid var(--border-secondary);
-  color: var(--button-text);
-  padding: var(--spacing-small) var(--spacing-medium);
-  font-weight: 500;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--button-bg-hover);
-  box-shadow: 0 1px 3px var(--shadow-color);
-}
-
-button:active {
-  background-color: var(--bg-active);
-  box-shadow: inset 0 1px 2px var(--shadow-color);
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* ============================================
-   WIDGETS
-   ============================================ */
-
-.widget {
-  background-color: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  margin: var(--spacing-small) var(--spacing-medium);
-  padding: var(--spacing-medium);
-}
-
-.widget > box > label {
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-/* ============================================
-   SCROLLBAR
-   ============================================ */
-
-scrollbar {
-  background-color: transparent;
-  width: 8px;
-}
-
-scrollbar slider {
-  background-color: var(--bg-hover);
-  border-radius: 4px;
-  min-width: 6px;
-}
-
-scrollbar slider:hover {
-  background-color: var(--bg-active);
-}
-
-/* ============================================
-   BLANK WINDOW (No notifications)
-   ============================================ */
-
-.blank-window {
-  background-color: transparent;
-}
-
-.blank-window label {
-  color: var(--text-dim);
-  font-size: 16px;
-  font-weight: 500;
-}
-
-/* ============================================
-   UTILITIES
-   ============================================ */
-
-.floating-notifications {
-  background-color: transparent;
-}
-
-/* Opacity states */
-.notification.dimmed {
+.notification-row .notification-background .notification.low,
+.notification-row .notification-background .notification.muted,
+.notification-row.muted .notification {
   opacity: 0.7;
 }
 
-/* Focus states */
-.notification:focus,
-button:focus {
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
+.notification-row .notification-background .notification.critical {
+  border: 2px solid var(--danger);
 }
 
-/* ============================================
-   RESPONSIVE ADJUSTMENTS
-   ============================================ */
+.notification-row .notification-background .notification .notification-default-action {
+  background: var(--bg);
+  border: none;
+  color: var(--text-color);
+  font-size: var(--font-size-body);
+  margin: 0;
+  padding: 0;
+  transition: var(--hover-tranistion);
+}
 
-@media (max-width: 500px) {
-  .control-center {
-    margin: var(--spacing-small);
-  }
-  
-  .notification {
-    margin: 4px;
-  }
+.notification-row .notification-background .notification .notification-default-action:hover {
+  background: var(--noti-bg-hover);
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content {
+  background: transparent;
+  padding: 12px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .image {
+  -gtk-icon-filter: none;
+  -gtk-icon-size: var(--notification-icon-size);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  margin: 0 8px 0 0;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .app-icon {
+  -gtk-icon-filter: none;
+  -gtk-icon-size: var(--notification-app-icon-size);
+  margin: 4px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box label {
+  filter: none;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
+  background: transparent;
+  color: var(--accent);
+  font-size: 9pt;
+  font-weight: 800;
+  text-shadow: none;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
+  background: transparent;
+  color: var(--success);
+  font-size: 9pt;
+  font-weight: 800;
+  margin-left: 8px;
+  text-shadow: none;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
+  background: transparent;
+  color: var(--fg);
+  font-size: var(--font-size-body);
+  font-weight: 800;
+  margin-top: 6px;
+  text-shadow: none;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content progressbar {
+  margin-top: 8px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content progressbar trough {
+  background: var(--bg-soft);
+  min-height: 3px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content progressbar progress {
+  background: var(--accent);
+  min-height: 3px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .body-image {
+  -gtk-icon-filter: none;
+  background: var(--bg-alt);
+  margin-top: 8px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply {
+  margin-top: 6px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-entry {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  caret-color: var(--accent);
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  margin-left: 4px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.notification-row .notification-background .notification .notification-alt-actions {
+  background: var(--bg-alt);
+  padding: 4px;
+}
+
+.notification-row .notification-background .notification .notification-action {
+  background: var(--bg);
+  font-size: 9pt;
+  margin: 2px;
+  padding: 0;
+}
+
+.notification-row .notification-background .notification .notification-action > button {
+  background: transparent;
+  border: none;
+  color: var(--danger);
+  font-size: 9pt;
+  padding: 2px 4px;
+}
+
+.notification-row .notification-background .notification .notification-action > button:hover {
+  background: var(--danger);
+  color: var(--bg);
+}
+
+.notification-group {
+  transition: opacity 200ms ease-in-out;
+}
+
+.notification-group .notification-group-close-button .close-button {
+  margin: 8px 12px;
+}
+
+.notification-group .notification-group-buttons,
+.notification-group .notification-group-headers {
+  color: var(--fg);
+  margin: 0 10px;
+}
+
+.notification-group .notification-group-headers {
+  font-size: var(--font-size-summary);
+}
+
+.notification-group .notification-group-headers .notification-group-icon {
+  -gtk-icon-size: var(--notification-group-icon-size);
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.notification-group .notification-group-headers .notification-group-header {
+  color: var(--fg);
+}
+
+.notification-group.collapsed.not-expanded {
+  opacity: 0.45;
+}
+
+.notification-group.collapsed .notification-row:not(:last-child) .notification-action,
+.notification-group.collapsed .notification-row:not(:last-child) .notification-default-action {
+  opacity: 0;
+}
+
+.notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
+  background: var(--hover-bg);
+}
+
+.control-center {
+  background: var(--cc-bg);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  color: var(--text-color);
+  margin-left: 6px;
+  padding: 4px;
+}
+
+.control-center .control-center-list-placeholder {
+  color: var(--fg-disabled);
+  opacity: 0.55;
+}
+
+.control-center .control-center-list {
+  background: transparent;
+}
+
+.control-center .control-center-list .notification {
+  box-shadow: none;
+}
+
+.control-center .control-center-list .notification .notification-default-action,
+.control-center .control-center-list .notification .notification-action {
+  transition: var(--group-collapse-tranistion), var(--hover-tranistion);
+}
+
+.control-center .control-center-list .notification .notification-default-action:hover,
+.control-center .control-center-list .notification .notification-action:hover {
+  background-color: var(--hover-bg);
+}
+
+.floating-notifications .notification {
+  box-shadow: none;
+}
+
+.widget {
+  background: transparent;
+  margin: 6px;
+  padding: 6px;
+}
+
+.cc-header {
+  color: var(--accent);
+  font-size: var(--font-size-summary);
+  margin: 4px 2px 4px 8px;
+  padding-bottom: 4px;
+}
+
+.cc-header > label {
+  font-size: 14pt;
+  margin-right: 8px;
+}
+
+.cc-header > button {
+  background: var(--bg-alt);
+  border: 1px solid var(--bg-alt);
+  color: var(--danger);
+  font-size: 12pt;
+  font-weight: 800;
+  min-height: 28px;
+  min-width: 40px;
+  padding: 2px 8px;
+}
+
+.cc-header > button:hover {
+  background: var(--danger);
+  color: var(--bg);
+}
+
+.cc-dnd {
+  margin: 2px 2px 6px 8px;
+}
+
+.cc-dnd label {
+  color: var(--danger);
+  font-size: 11pt;
+  margin-right: 8px;
+}
+
+.cc-dnd switch {
+  background: var(--bg-alt);
+  box-shadow: none;
+  margin-left: 8px;
+  min-height: 18px;
+  min-width: 42px;
+  transition: all 0.1s ease-in-out;
+}
+
+.cc-dnd switch:checked {
+  background: var(--danger);
+}
+
+.cc-dnd switch slider {
+  background: var(--fg);
+  min-height: 16px;
+  min-width: 16px;
+}
+
+.widget-mpris,
+.widget-volume,
+.widget-backlight,
+.widget-slider {
+  background: var(--bg-alt);
+  border: 1px solid var(--line-soft);
+  margin: 8px;
+  padding: 8px 10px;
+}
+
+.widget-mpris > box > button {
+  margin: 0;
+}
+
+.widget-mpris .widget-mpris-player {
+  border: 1px solid var(--line);
+  margin: 0;
+  padding: 0;
+}
+
+.widget-mpris .widget-mpris-player .mpris-background {
+  filter: blur(10px);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay {
+  background-color: var(--mpris-album-art-overlay);
+  padding: 12px;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button:hover,
+.widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover,
+.widget-mpris > box > button:hover {
+  background: var(--mpris-button-hover);
+  color: var(--bg);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-album-art {
+  -gtk-icon-size: var(--mpris-album-art-icon-size);
+  border: 1px solid var(--line);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
+  color: var(--fg);
+  font-size: 11pt;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
+  color: var(--fg-muted);
+  font-size: 9pt;
+}
+
+.widget-volume row image {
+  -gtk-icon-size: var(--widget-volume-row-icon-size);
+}
+
+.widget-volume > box > button,
+.widget-backlight > box > button,
+.widget-slider > box > button {
+  background: var(--accent-soft);
+  border: none;
+  color: var(--bg);
+}
+
+.widget-volume > box > button:hover,
+.widget-backlight > box > button:hover,
+.widget-slider > box > button:hover {
+  background: var(--accent);
+}
+
+.per-app-volume {
+  background: var(--bg-soft);
+  margin: 6px 4px 4px;
+  padding: 4px 6px 6px;
+}
+
+.widget-slider label,
+.widget-volume label,
+.widget-backlight label {
+  color: var(--danger);
+  font-size: 10pt;
+}
+
+scale {
+  margin-top: 6px;
+}
+
+scale trough {
+  background: var(--bg-soft);
+  border: 1px solid var(--line-soft);
+  min-height: 4px;
+}
+
+scale highlight,
+scale fill {
+  background: var(--accent);
+}
+
+scale slider {
+  background: var(--fg);
+  border: 1px solid var(--accent);
+  margin: -6px 0;
+  min-height: 10px;
+  min-width: 10px;
 }
